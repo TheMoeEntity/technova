@@ -57,13 +57,11 @@ export default function FAQSection() {
   };
 
   return (
-    <div className="min-h-screen bg-white px-8 py-16">
+    <div className="min-h-screen bg-white px-3 md:px-8 py-16">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold text-black leading-tight">
-            Everything you need to
-            <br />
-            know about Technova.
+          <h2 className="text-4xl mx-auto max-w-3xl md:text-5xl font-bold text-black leading-tight">
+            Everything you need to know about Technova.
           </h2>
         </div>
 

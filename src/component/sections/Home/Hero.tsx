@@ -18,7 +18,7 @@ const Hero = () => {
         <h1 className="text-3xl text-center md:text-4xl max-w-3xl mx-auto lg:text-5xl xl:text-[65px] font-bold">
           Africa&apos;s Biggest Web3 Carnival of Innovation
         </h1>
-        <div className="w-fit text-sm mt-5 flex justify-center gap-5 items-center">
+        <div className="w-fit flex-wrap text-sm mt-5 flex justify-center gap-5 items-center">
           <div className="flex border rounded-4xl border-gray-200 px-4 py-2 items-center gap-2">
             <Calendar />
             <span>March 12th-14th, 2026</span>
@@ -36,7 +36,7 @@ const Hero = () => {
           initial={{ opacity: 0, x: -50, y: 50 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="absolute translate-y-1/4 flex items-end left-[20%] xl:w-[500px] h-[350px]"
+          className="absolute translate-y-[70%] md:translate-y-1/4 flex items-end left-0 w-[250px] md:left-[20%] xl:w-[500px] h-[250px] xl:h-[350px]"
         >
           <motion.div
             animate={{ y: [0, -15, 0] }}
@@ -60,7 +60,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="absolute top-0 left-[28%] xl:w-[650px] h-[450px]"
+          className="absolute z-2 top-0 left-[28%] xl:w-[650px] h-[450px]"
         >
           <motion.div
             animate={{ y: [0, -20, 0] }}
@@ -85,7 +85,7 @@ const Hero = () => {
           initial={{ opacity: 0, x: 50, y: 50 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-          className="absolute flex items-end translate-y-[50%] right-[17%] xl:w-[350px] h-[300px]"
+          className="absolute flex items-end translate-y-[50%] right-0 md:right-[17%] w-[200px] md:w-[350px] h-[350px] md:h-[300px]"
         >
           <motion.div
             animate={{ y: [0, -15, 0] }}

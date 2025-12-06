@@ -13,7 +13,7 @@ export default function AgendaTabs({
 }: AgendaTabsProps) {
   const tabColors = ["bg-[#F85B1A]", "bg-[#FFC420]", "bg-[#1CC2FF]"];
   return (
-    <div className="flex gap-4 bg-zinc-900/50 p-2 rounded-full w-full">
+    <div className="flex flex-wrap flex-col md:flex-row gap-4 bg-zinc-900/50 p-2 md:rounded-full w-full">
       {days.map((day) => (
         <button
           key={day.id}

@@ -7,8 +7,8 @@ import { PiTiktokLogoBold } from "react-icons/pi"; // tiktok icon looks nicer vi
 import technovalogo from "@/assets/images/technova-logo-white.svg";
 export default function Footer() {
   return (
-    <footer className="w-full bg-black text-white py-16 px-8">
-      <div className="max-w-6xl mx-auto flex flex-col gap-12 lg:flex-row justify-between items-center">
+    <footer className="w-full bg-black text-white py-16 px-6 md:px-8">
+      <div className="max-w-6xl mx-auto flex flex-col gap-12 lg:flex-row justify-between md:items-center">
         {/* Left section */}
         <div className="flex flex-col items-start gap-18">
           {/* LOGO */}

@@ -80,10 +80,10 @@ export default function Agenda() {
   };
 
   return (
-    <div className="min-h-screen bg-black px-8 py-16">
+    <div className="min-h-screen bg-black px-3 md:px-8 py-16">
       <div className="max-w-5xl mx-auto">
         {/* Header Section */}
-        <div className="grid grid-cols-2 gap-12 mb-12 place-items-center">
+        <div className="grid px-5 md:px-0 grid-cols-1 md:grid-cols-2 gap-12 mb-12 place-items-center">
           <div>
             <h1 className="text-5xl font-bold text-white leading-tight mb-4">
               Explore our 3days packed Agenda.

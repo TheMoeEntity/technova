@@ -66,8 +66,8 @@ const Attendees = () => {
   };
 
   return (
-    <section className="w-full py-16 xl:pb-28 xl:pt-16">
-      <h2 className="text-3xl text-center md:text-4xl max-w-xl mx-auto lg:text-5xl font-bold">
+    <section className="w-full py-8 xl:pb-28 xl:pt-16">
+      <h2 className="text-center text-4xl max-w-xl mx-auto lg:text-5xl font-bold">
         Who Should Attend?
       </h2>
       <motion.div
