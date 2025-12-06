@@ -15,7 +15,7 @@ const Hero = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="flex flex-col items-center z-10 relative"
       >
-        <h1 className="text-[30px] text-center md:text-4xl max-w-3xl mx-auto lg:text-5xl xl:text-[65px] font-bold">
+        <h1 className="text-[36px] tracking-tighter md:tracking-normal text-center md:text-4xl max-w-3xl mx-auto lg:text-5xl xl:text-[65px] font-bold px-5 md:px-0">
           Africa&apos;s Biggest Web3 Carnival of Innovation
         </h1>
         <div className="w-fit flex-wrap text-sm mt-5 flex justify-center gap-5 items-center">
@@ -60,7 +60,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="absolute z-2 top-0 left-[28%] xl:w-[650px] h-[450px]"
+          className="absolute z-2 top-0 left-[18%] md:left-[28%] xl:w-[650px] h-[450px]"
         >
           <motion.div
             animate={{ y: [0, -20, 0] }}
@@ -85,7 +85,7 @@ const Hero = () => {
           initial={{ opacity: 0, x: 50, y: 50 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-          className="absolute flex items-end translate-y-[50%] right-0 md:right-[17%] w-[200px] md:w-[350px] h-[350px] md:h-[300px]"
+          className="absolute flex items-end translate-y-[50%] right-0 md:right-[17%] w-[190px] md:w-[350px] h-[350px] md:h-[300px]"
         >
           <motion.div
             animate={{ y: [0, -15, 0] }}
