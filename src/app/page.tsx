@@ -7,7 +7,7 @@ import FAQSection from "@/component/sections/Home/FAQ";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen bg-zinc-50 font-bricolage-grotesque">
+    <div className="flex flex-col min-h-screen bg-white font-bricolage-grotesque">
       <Hero />
       <About />
       <div className="w-full flex my-16 overflow-hidden">
