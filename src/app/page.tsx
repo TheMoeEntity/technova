@@ -1,18 +1,26 @@
 import Hero from "@/component/sections/Home/Hero";
 import About from "@/component/sections/Home/About";
 import Banner from "@/component/ui/Banner";
+import Attendees from "@/component/sections/Home/Attendees";
+import Agenda from "@/component/sections/Home/Agenda";
+import FAQSection from "@/component/sections/Home/FAQ";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-zinc-50 font-bricolage-grotesque">
       <Hero />
       <About />
-      <div className="w-full flex mt-16 overflow-hidden">
-        <span className="bg-black text-2xl text-white p-3 whitespace-nowrap">
+      <div className="w-full flex my-16 overflow-hidden">
+        <span className="bg-black text-2xl text-white py-4 px-6 whitespace-nowrap w-fit">
           Our Partners
         </span>
-        <Banner />
+        <div className="flex-1 w-full overflow-hidden">
+          <Banner />
+        </div>
       </div>
+      <Attendees />
+      <Agenda />
+      <FAQSection />
     </div>
   );
 }

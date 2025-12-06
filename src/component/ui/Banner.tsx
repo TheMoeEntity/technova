@@ -19,10 +19,11 @@ const Banner = () => {
   return (
     <div className="w-full bg-[#FFF9EA] h-auto">
       <Marquee
-        gradientColor="#fbe6b1"
+        gradientColor="#f9f0d9"
         className="w-full"
         speed={110}
-        gradient={false}
+        gradientWidth={70}
+        gradient={true}
       >
         <div className="flex bg-[#FFF9EA] flex-wrap md:flex-nowrap justify-center items-center gap-5 py-3">
           {displayText.map((text, index) => (

@@ -1,47 +1,109 @@
+"use client";
 import { Calendar, MapPin } from "lucide-react";
 import Image from "next/image";
 import artifact from "@/assets/images/artifact-1.svg";
 import artifact2 from "@/assets/images/artifact-2.svg";
 import artifact3 from "@/assets/images/artifact-3.svg";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
     <section className="bg-[#FFF9EA] flex-col min-h-[700px] overflow-y-hidden w-full flex items-center py-28">
-      <h1 className="text-3xl text-center md:text-4xl max-w-3xl mx-auto lg:text-5xl xl:text-[65px] font-bold">
-        Africa&apos;s Biggest Web3 Carnival of Innovation
-      </h1>
-      <div className="w-fit text-sm mt-5 flex justify-center gap-5 items-center">
-        <div className="flex border rounded-4xl border-gray-200 px-4 py-2 items-center gap-2">
-          <Calendar />
-          <span>March 12th-14th, 2026</span>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="flex flex-col items-center z-10 relative"
+      >
+        <h1 className="text-3xl text-center md:text-4xl max-w-3xl mx-auto lg:text-5xl xl:text-[65px] font-bold">
+          Africa&apos;s Biggest Web3 Carnival of Innovation
+        </h1>
+        <div className="w-fit text-sm mt-5 flex justify-center gap-5 items-center">
+          <div className="flex border rounded-4xl border-gray-200 px-4 py-2 items-center gap-2">
+            <Calendar />
+            <span>March 12th-14th, 2026</span>
+          </div>
+          <div className="flex border rounded-4xl border-gray-200 px-4 py-2 items-center gap-2">
+            <MapPin />
+            <span>The Ecumenical Centre, Abakaliki</span>
+          </div>
         </div>
-        <div className="flex border rounded-4xl border-gray-200 px-4 py-2 items-center gap-2">
-          <MapPin />
-          <span>The Ecumenical Centre, Abakaliki</span>
-        </div>
-      </div>
+      </motion.div>
+
       <div className="-mt-5 h-full relative flex w-full justify-center">
-        <div className="absolute translate-y-1/4 flex items-end left-[20%] xl:w-[500px] h-[350px] ">
-          <Image
-            src={artifact}
-            alt="Artifact 1"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="absolute top-0 left-[28%] xl:w-[650px] h-[450px]">
-          <Image
-            src={artifact2}
-            alt="Artifact 2"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="absolute  flex items-end translate-y-[50%] right-[17%] xl:w-[350px] h-[300px] ">
-          <Image
-            src={artifact3}
-            alt="Artifact 3"
-            className="w-full h-full object-contain"
-          />
-        </div>
+        {/* Left Artifact */}
+        <motion.div
+          initial={{ opacity: 0, x: -50, y: 50 }}
+          animate={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          className="absolute translate-y-1/4 flex items-end left-[20%] xl:w-[500px] h-[350px]"
+        >
+          <motion.div
+            animate={{ y: [0, -15, 0] }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="w-full h-full"
+          >
+            <Image
+              src={artifact}
+              alt="Artifact 1"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+        </motion.div>
+
+        {/* Center Artifact */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          className="absolute top-0 left-[28%] xl:w-[650px] h-[450px]"
+        >
+          <motion.div
+            animate={{ y: [0, -20, 0] }}
+            transition={{
+              duration: 5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 0.5,
+            }}
+            className="w-full h-full"
+          >
+            <Image
+              src={artifact2}
+              alt="Artifact 2"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+        </motion.div>
+
+        {/* Right Artifact */}
+        <motion.div
+          initial={{ opacity: 0, x: 50, y: 50 }}
+          animate={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+          className="absolute flex items-end translate-y-[50%] right-[17%] xl:w-[350px] h-[300px]"
+        >
+          <motion.div
+            animate={{ y: [0, -15, 0] }}
+            transition={{
+              duration: 4.5,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
+            }}
+            className="w-full h-full"
+          >
+            <Image
+              src={artifact3}
+              alt="Artifact 3"
+              className="w-full h-full object-contain"
+            />
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
