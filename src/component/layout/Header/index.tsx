@@ -12,7 +12,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="absolute top-0 left-0 right-0 flex w-full py-5 px-5 md:px-12 items-center gap-5 justify-between z-50">
+    <header className="absolute top-0 left-0 right-0 flex w-full py-5 px-5 md:px-12 items-center gap-5 justify-between md:justify-evenly z-50">
       <div className="z-50">
         <Image src={technovalogo} alt="Logo" width={100} height={100} />
       </div>
@@ -29,13 +29,20 @@ const Header = () => {
           </Link>
         ))}
       </div>
-      <Link
-        href="/sponsor"
-        className="hidden md:block bg-[#000000] rounded-xl text-white px-5 py-2 hover:bg-black/80 transition-colors"
-      >
-        Become a Sponsor
-      </Link>
-
+      <div className="flex gap-3 items-center">
+        <Link
+          href="/tickets"
+          className="hidden md:block border border-[#FFC520] bg-[#FFEFC1] rounded-xl text-black px-5 py-2 transition-colors"
+        >
+          Become a Sponsor
+        </Link>
+        <Link
+          href="/tickets"
+          className="hidden md:block bg-[#000000] rounded-xl text-white px-5 py-2 hover:bg-black/80 transition-colors"
+        >
+          Get Tickets
+        </Link>
+      </div>
       {/* Mobile Menu Toggle */}
       <button
         className="md:hidden z-50 p-2"
@@ -65,13 +72,20 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/sponsor"
-              className="bg-[#000000] rounded-xl text-white px-8 py-3 text-lg mt-4 hover:bg-black/80 transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Become a Sponsor
-            </Link>
+            <div className="flex gap-8 flex-col items-center">
+              <Link
+                href="/tickets"
+                className=" md:block border border-[#FFC520] bg-[#FFEFC1] rounded-xl text-black px-5 py-2 transition-colors"
+              >
+                Become a Sponsor
+              </Link>
+              <Link
+                href="/tickets"
+                className=" md:block bg-[#000000] rounded-xl text-white px-5 py-2 hover:bg-black/80 transition-colors"
+              >
+                Get Tickets
+              </Link>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { X, Instagram, Linkedin } from "lucide-react";
 import { PiTiktokLogoBold } from "react-icons/pi"; // tiktok icon looks nicer via react-icons
 import technovalogo from "@/assets/images/technova-logo-white.svg";
+import footerIcon from "@/assets/images/footer-icon.svg";
 export default function Footer() {
   return (
     <footer className="w-full bg-black text-white py-16 px-6 md:px-8">
@@ -36,9 +37,9 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-10">
           {/* pixel graphic */}
           <Image
-            src="/pixelart.png"
+            src={footerIcon}
             alt="Graphic"
-            width={140}
+            width={180}
             height={140}
             className="object-contain"
           />
@@ -50,25 +51,25 @@ export default function Footer() {
               href="#"
               className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition"
             >
-              <X className="w-5 h-5" />
+              <X className="w-8 h-8" />
             </a>
             <a
               href="#"
               className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition"
             >
-              <PiTiktokLogoBold className="w-5 h-5" />
+              <PiTiktokLogoBold className="w-8 h-8" />
             </a>
             <a
               href="#"
               className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition"
             >
-              <Instagram className="w-5 h-5" />
+              <Instagram className="w-8 h-8" />
             </a>
             <a
               href="#"
               className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition"
             >
-              <Linkedin className="w-5 h-5" />
+              <Linkedin className="w-8 h-8" />
             </a>
           </div>
         </div>
