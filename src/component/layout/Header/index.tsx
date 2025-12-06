@@ -13,9 +13,9 @@ const Header = () => {
 
   return (
     <header className="absolute top-0 left-0 right-0 flex w-full py-5 px-5 md:px-12 items-center gap-5 justify-between md:justify-evenly z-50">
-      <div className="z-50">
+      <Link href="/" className="z-50">
         <Image src={technovalogo} alt="Logo" width={100} height={100} />
-      </div>
+      </Link>
 
       {/* Desktop Navigation */}
       <div className="hidden md:flex gap-10 items-center">
@@ -31,7 +31,7 @@ const Header = () => {
       </div>
       <div className="flex gap-3 items-center">
         <Link
-          href="/tickets"
+          href="/sponsor"
           className="hidden md:block border border-[#FFC520] bg-[#FFEFC1] rounded-xl text-black px-5 py-2 transition-colors"
         >
           Become a Sponsor
@@ -74,7 +74,7 @@ const Header = () => {
             ))}
             <div className="flex gap-8 flex-col items-center">
               <Link
-                href="/tickets"
+                href="/sponsor"
                 className=" md:block border border-[#FFC520] bg-[#FFEFC1] rounded-xl text-black px-5 py-2 transition-colors"
               >
                 Become a Sponsor
