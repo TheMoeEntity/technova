@@ -17,13 +17,13 @@ const About = () => {
   };
 
   return (
-    <section className="w-full py-16 xl:py-28 space-y-8">
+    <section className="w-full py-16 xl:py-28 space-y-4">
       <h2 className="text-3xl text-center md:text-4xl max-w-xl mx-auto lg:text-5xl font-bold">
         About Technova - Africa&apos;s Web3 Carnival
       </h2>
       <div className="text-center max-w-3xl mx-auto relative grid grid-cols-2 gap-8 md:block">
         <div className="col-span-2 p-4 md:p-0 md:w-full">
-          <p className="block w-full text-lg leading-relaxed text-gray-600">
+          <p className="block w-full text-base md:text-lg leading-relaxed text-gray-600">
             TechNova Africa&apos;s Web3 Carnival is more than just an event –
             it&apos;s a movement to position Africa at the forefront of
             blockchain innovation and decentralized technology. We&apos;re

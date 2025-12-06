@@ -75,7 +75,7 @@ const Attendees = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="grid grid-cols-1 mt-20 md:grid-cols-2 gap-8 mx-auto max-w-5xl"
+        className="grid grid-cols-1 px-4 md:px-0 mt-20 md:grid-cols-2 gap-5 md:gap-8 mx-auto max-w-5xl"
       >
         {attendeeAssets.map((asset, index) => (
           <motion.div

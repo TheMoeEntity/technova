@@ -7,7 +7,12 @@ import { Star } from "lucide-react";
 
 const sponsorComponent = (
   <div className="flex items-center gap-5">
-    <Image src={sponsorImage} alt="DTCSI" width={100} height={100} />
+    <Image
+      src={sponsorImage}
+      alt="DTCSI"
+      width={100}
+      className="w-[100px] h-10 md:h-[100px]"
+    />
     <Star fill="#F85B1A" stroke="#F85B1A" color="#F85B1A" />
   </div>
 );
