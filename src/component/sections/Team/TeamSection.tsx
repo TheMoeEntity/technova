@@ -2,7 +2,17 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Linkedin } from "lucide-react";
+import {
+  X,
+  Linkedin,
+  Instagram,
+  Facebook,
+  Youtube,
+  Globe,
+  TwitterIcon,
+} from "lucide-react";
+import { FaBehance } from "react-icons/fa";
+import { PiTiktokLogoBold } from "react-icons/pi";
 import Image, { StaticImageData } from "next/image";
 import obinna from "@/assets/images/obinna-adum.svg";
 import chuksOkonkwo from "@/assets/images/chuks-okonkwo.svg";
@@ -17,6 +27,7 @@ import nenyeKingsley from "@/assets/images/nenye-kingsley.svg";
 import odinmaMmesoma from "@/assets/images/odinma-mmesoma.svg";
 import victorIkem from "@/assets/images/victor-ikem.svg";
 import joshuaNwankwo from "@/assets/images/joshua-nwankwo.svg";
+
 interface TeamMember {
   id: string;
   name: string;
@@ -26,6 +37,12 @@ interface TeamMember {
   socials: {
     twitter?: string;
     linkedin?: string;
+    instagram?: string;
+    behance?: string;
+    tiktok?: string;
+    youtube?: string;
+    facebook?: string;
+    website?: string;
   };
 }
 
@@ -36,7 +53,10 @@ const teamMembers: TeamMember[] = [
     role: "Founder and convener TECHNOVA",
     image: obinna,
     category: "Core Team",
-    socials: { twitter: "#", linkedin: "#" },
+    socials: {
+      twitter: "X.com/thenameisbrill",
+      linkedin: "https://linkedin.com/in/adum-obinna-6aa268221",
+    },
   },
   {
     id: "2",
@@ -76,7 +96,10 @@ const teamMembers: TeamMember[] = [
     role: "Lead Designer, TECHNOVA",
     image: jamesEmmanuella,
     category: "Design",
-    socials: { twitter: "#", linkedin: "#" },
+    socials: {
+      twitter: "https://x.com/the_ellajames",
+      website: "https://ellajames.framer.website/",
+    },
   },
   {
     id: "7",
@@ -92,7 +115,10 @@ const teamMembers: TeamMember[] = [
     role: "SMM & Content, TECHNOVA",
     image: dannyAmara,
     category: "Content & Video",
-    socials: { twitter: "#", linkedin: "#" },
+    socials: {
+      twitter: "https://x.com/apostleofdesign",
+      youtube: "https://youtube.com/@apostleofdesign",
+    },
   },
   {
     id: "9",
@@ -100,7 +126,10 @@ const teamMembers: TeamMember[] = [
     role: "Operational Manager, TECHNOVA",
     image: opokeDaniel,
     category: "Content & Video",
-    socials: { twitter: "#", linkedin: "#" },
+    socials: {
+      instagram: "https://www.instagram.com/dansparkcfr?igsh=NjBqZWI2ZjhwMGtu",
+      twitter: " https://x.com/danspark_gmi?t=jzhDbXi23pVNZ3ZLHHQUeA&s=09",
+    },
   },
   {
     id: "10",
@@ -108,15 +137,23 @@ const teamMembers: TeamMember[] = [
     role: "Content team",
     image: nenyeKingsley,
     category: "Content & Video",
-    socials: { twitter: "#", linkedin: "#" },
+    socials: {
+      twitter: "https://x.com/NenyeKingsley?t=yPhzvPuI4AlMyBkdYhgyBg&s=09",
+      linkedin:
+        "https://www.linkedin.com/in/vexahlia-kingsley-409315244?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    },
   },
   {
     id: "11",
     name: "Victor Ikem",
     role: "Visual Storyteller/ Media strategist",
-    image: nenyeKingsley,
+    image: victorIkem,
     category: "Content & Video",
-    socials: { twitter: "#", linkedin: "#" },
+    socials: {
+      facebook: "https://www.facebook.com/share/1G21c8cYDF/",
+      instagram:
+        "#https://www.instagram.com/victorikem_?igsh=MWsxOWl4aTB4NWdzNQ==",
+    },
   },
   {
     id: "12",
@@ -124,7 +161,10 @@ const teamMembers: TeamMember[] = [
     role: "Designer",
     image: odinmaMmesoma,
     category: "Design",
-    socials: { twitter: "#", linkedin: "#" },
+    socials: {
+      twitter: "https://x.com/SmartMeso?t=jF_2wL2P712wOpTFzw74Tg&s=09",
+      behance: "https://www.behance.net/SmartNmeso",
+    },
   },
   {
     id: "13",
@@ -132,7 +172,9 @@ const teamMembers: TeamMember[] = [
     role: "Content team",
     image: elizabethIgbinedion,
     category: "Content & Video",
-    socials: { twitter: "#", linkedin: "#" },
+    socials: {
+      instagram: "https://www.instagram.com/liz_igbinedion",
+    },
   },
 ];
 
@@ -145,6 +187,29 @@ const categories = [
   "Marketing",
   "Content & Video",
 ];
+
+const getSocialIcon = (platform: string) => {
+  switch (platform) {
+    case "twitter":
+      return <TwitterIcon size={20} />;
+    case "linkedin":
+      return <Linkedin size={20} />;
+    case "instagram":
+      return <Instagram size={20} />;
+    case "facebook":
+      return <Facebook size={20} />;
+    case "youtube":
+      return <Youtube size={20} />;
+    case "tiktok":
+      return <PiTiktokLogoBold size={20} />;
+    case "behance":
+      return <FaBehance size={20} />;
+    case "website":
+      return <Globe size={20} />;
+    default:
+      return <Globe size={20} />;
+  }
+};
 
 export default function TeamSection() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -214,22 +279,22 @@ export default function TeamSection() {
 
                 {/* Social Links */}
                 <div className="flex gap-4 flex-col md:flex-row flex-shrink-0">
-                  <motion.a
-                    href={member.socials.twitter}
-                    className="p-2 rounded-full bg-[#F5F5F5] text-black"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <X size={20} />
-                  </motion.a>
-                  <motion.a
-                    href={member.socials.linkedin}
-                    className="p-2 rounded-full bg-[#F5F5F5] text-black"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Linkedin size={20} />
-                  </motion.a>
+                  {Object.entries(member.socials).map(([platform, url]) => {
+                    if (!url) return null;
+                    return (
+                      <motion.a
+                        key={platform}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 rounded-full bg-[#F5F5F5] text-black"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        {getSocialIcon(platform)}
+                      </motion.a>
+                    );
+                  })}
                 </div>
               </motion.div>
             ))}
