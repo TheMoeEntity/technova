@@ -11,7 +11,7 @@ const sponsorComponent = (
       src={sponsorImage}
       alt="DTCSI"
       width={100}
-      className="w-[100px] h-10 md:h-[100px]"
+      className="w-[100px] h-10 md:h-[50px]"
     />
     <Star fill="#F85B1A" stroke="#F85B1A" color="#F85B1A" />
   </div>
@@ -30,7 +30,7 @@ const Banner = () => {
         gradientWidth={70}
         gradient={true}
       >
-        <div className="flex bg-[#FFF9EA] flex-wrap md:flex-nowrap justify-center items-center gap-5 py-3">
+        <div className="flex bg-[#FFF9EA] flex-wrap md:flex-nowrap justify-center items-center gap-5 py-1">
           {displayText.map((text, index) => (
             <div key={index} className="px-5">
               {text}
