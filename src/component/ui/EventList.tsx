@@ -10,9 +10,14 @@ interface Event {
 interface EventListProps {
   events: Event[];
   activeDay: string;
+  color: string;
 }
 
-export default function EventList({ events, activeDay }: EventListProps) {
+export default function EventList({
+  events,
+  activeDay,
+  color,
+}: EventListProps) {
   const containerVariants: Variants = {
     hidden: { opacity: 0, x: 20 },
     visible: {
@@ -67,7 +72,10 @@ export default function EventList({ events, activeDay }: EventListProps) {
             <motion.div key={index} variants={itemVariants}>
               <div className="flex flex-col md:flex-row md:items-center justify-between py-6 px-2 md:px-4">
                 <div className="flex items-center gap-4">
-                  <div className="w-2 min-w-2 min-h-2 h-2 bg-orange-500 rounded-full mt-1"></div>
+                  <div
+                    style={{ backgroundColor: color }}
+                    className={`w-2 min-w-2 min-h-2 h-2  rounded-full mt-1`}
+                  ></div>
                   <h3 className="text-lg md:text-xl font-bold text-black">
                     {event.title}
                   </h3>
@@ -77,7 +85,10 @@ export default function EventList({ events, activeDay }: EventListProps) {
                 </span>
               </div>
               {index < events.length - 1 && (
-                <div className="h-px bg-orange-200/50 mx-4"></div>
+                <div
+                  className="h-[0.5px] mx-4"
+                  style={{ backgroundColor: color, opacity: 0.3 }}
+                ></div>
               )}
             </motion.div>
           ))}

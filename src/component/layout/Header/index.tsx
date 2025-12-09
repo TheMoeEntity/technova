@@ -12,13 +12,13 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="absolute top-0 left-0 right-0 flex w-full py-5 px-5 md:px-12 items-center gap-5 justify-between md:justify-evenly z-50">
+    <header className="absolute top-0 left-0 right-0 flex w-full py-5 px-5 md:px-12 items-center gap-5 justify-between lg:justify-evenly z-50">
       <Link href="/" className="z-50">
-        <Image src={technovalogo} alt="Logo" width={100} height={100} />
+        <Image src={technovalogo} alt="Logo" width={95} height={95} />
       </Link>
 
       {/* Desktop Navigation */}
-      <div className="hidden md:flex gap-10 items-center">
+      <div className="hidden lg:flex gap-10 items-center">
         {links.map((link) => (
           <Link
             key={link.href}
@@ -32,20 +32,20 @@ const Header = () => {
       <div className="flex gap-3 items-center">
         <Link
           href="/sponsor"
-          className="hidden md:block border border-[#FFC520] bg-[#FFEFC1] rounded-xl text-black px-5 py-2 transition-colors"
+          className="hidden lg:block border border-[#FFC520] bg-[#FFEFC1] rounded-xl text-black px-5 py-2 transition-colors"
         >
           Become a Sponsor
         </Link>
         <Link
           href="/tickets"
-          className="hidden md:block bg-[#000000] rounded-xl text-white px-5 py-2 hover:bg-black/80 transition-colors"
+          className="hidden lg:block bg-[#000000] rounded-xl text-white px-5 py-2 hover:bg-black/80 transition-colors"
         >
           Get Tickets
         </Link>
       </div>
       {/* Mobile Menu Toggle */}
       <button
-        className="md:hidden z-50 p-2"
+        className="lg:hidden z-50 p-2"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle menu"
       >
@@ -60,7 +60,7 @@ const Header = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-[#FFF9EA] z-40 flex flex-col items-center justify-center gap-8 md:hidden"
+            className="fixed inset-0 bg-[#FFF9EA] z-40 flex flex-col items-center justify-center gap-8 lg:hidden"
           >
             {links.map((link) => (
               <Link
@@ -75,13 +75,13 @@ const Header = () => {
             <div className="flex gap-8 flex-col items-center">
               <Link
                 href="/sponsor"
-                className=" md:block border border-[#FFC520] bg-[#FFEFC1] rounded-xl text-black px-5 py-2 transition-colors"
+                className="lg:block border border-[#FFC520] bg-[#FFEFC1] rounded-xl text-black px-5 py-2 transition-colors"
               >
                 Become a Sponsor
               </Link>
               <Link
                 href="/tickets"
-                className=" md:block bg-[#000000] rounded-xl text-white px-5 py-2 hover:bg-black/80 transition-colors"
+                className="lg:block bg-[#000000] rounded-xl text-white px-5 py-2 hover:bg-black/80 transition-colors"
               >
                 Get Tickets
               </Link>

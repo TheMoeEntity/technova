@@ -3,13 +3,25 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Linkedin } from "lucide-react";
-import Image from "next/image";
-
+import Image, { StaticImageData } from "next/image";
+import obinna from "@/assets/images/obinna-adum.svg";
+import chuksOkonkwo from "@/assets/images/chuks-okonkwo.svg";
+import toochukwuOkoro from "@/assets/images/toochukwu-okoro.svg";
+import zebulun from "@/assets/images/zebulun.svg";
+import uduUdumaSamuel from "@/assets/images/udu-uduma.svg";
+import opokeDaniel from "@/assets/images/opoke-daniel.svg";
+import dannyAmara from "@/assets/images/danny-amara.svg";
+import elizabethIgbinedion from "@/assets/images/elizabeth-igbinedion.svg";
+import jamesEmmanuella from "@/assets/images/james-emmanuella.svg";
+import nenyeKingsley from "@/assets/images/nenye-kingsley.svg";
+import odinmaMmesoma from "@/assets/images/odinma-mmesoma.svg";
+import victorIkem from "@/assets/images/victor-ikem.svg";
+import joshuaNwankwo from "@/assets/images/joshua-nwankwo.svg";
 interface TeamMember {
   id: string;
   name: string;
   role: string;
-  image: string;
+  image: string | StaticImageData;
   category: string;
   socials: {
     twitter?: string;
@@ -22,8 +34,7 @@ const teamMembers: TeamMember[] = [
     id: "1",
     name: "Obinna Adum",
     role: "Founder and convener TECHNOVA",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
+    image: obinna,
     category: "Core Team",
     socials: { twitter: "#", linkedin: "#" },
   },
@@ -31,8 +42,7 @@ const teamMembers: TeamMember[] = [
     id: "2",
     name: "Toochukwu Okoro",
     role: "Founder and CEO, Azza",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop",
+    image: toochukwuOkoro,
     category: "Core Team",
     socials: { twitter: "#", linkedin: "#" },
   },
@@ -40,8 +50,7 @@ const teamMembers: TeamMember[] = [
     id: "3",
     name: "ENGR. Chuks Okoronkwo",
     role: "Programs Manager, TECHNOVA",
-    image:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop",
+    image: chuksOkonkwo,
     category: "Organising",
     socials: { twitter: "#", linkedin: "#" },
   },
@@ -49,8 +58,7 @@ const teamMembers: TeamMember[] = [
     id: "4",
     name: "Zebulun",
     role: "Creative director TECHNOVA",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop",
+    image: zebulun,
     category: "Design",
     socials: { twitter: "#", linkedin: "#" },
   },
@@ -58,35 +66,71 @@ const teamMembers: TeamMember[] = [
     id: "5",
     name: "Udu Uduma Samuel",
     role: "Partnerships and Collaborations",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
+    image: uduUdumaSamuel,
     category: "Core Team",
     socials: { twitter: "#", linkedin: "#" },
   },
   {
     id: "6",
-    name: "Chioma Okonkwo",
-    role: "Marketing Lead, TECHNOVA",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop",
-    category: "Marketing",
+    name: "James Emmanuella",
+    role: "Lead Designer, TECHNOVA",
+    image: jamesEmmanuella,
+    category: "Design",
     socials: { twitter: "#", linkedin: "#" },
   },
   {
     id: "7",
-    name: "Dev Engineer",
-    role: "Lead Engineer, TECHNOVA",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop",
+    name: "Joshua Nwankwo",
+    role: "Founder letsdap, Ticketing provider TECHNOVA",
+    image: joshuaNwankwo,
     category: "Engineering",
     socials: { twitter: "#", linkedin: "#" },
   },
   {
     id: "8",
-    name: "Media Producer",
-    role: "Content & Video Lead",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
+    name: "Danny Amara",
+    role: "SMM & Content, TECHNOVA",
+    image: dannyAmara,
+    category: "Content & Video",
+    socials: { twitter: "#", linkedin: "#" },
+  },
+  {
+    id: "9",
+    name: "Opoke Daniel",
+    role: "Operational Manager, TECHNOVA",
+    image: opokeDaniel,
+    category: "Content & Video",
+    socials: { twitter: "#", linkedin: "#" },
+  },
+  {
+    id: "10",
+    name: "Nenye Kingsley",
+    role: "Content team",
+    image: nenyeKingsley,
+    category: "Content & Video",
+    socials: { twitter: "#", linkedin: "#" },
+  },
+  {
+    id: "11",
+    name: "Victor Ikem",
+    role: "Visual Storyteller/ Media strategist",
+    image: nenyeKingsley,
+    category: "Content & Video",
+    socials: { twitter: "#", linkedin: "#" },
+  },
+  {
+    id: "12",
+    name: "Odinma Nmesoma",
+    role: "Designer",
+    image: odinmaMmesoma,
+    category: "Design",
+    socials: { twitter: "#", linkedin: "#" },
+  },
+  {
+    id: "13",
+    name: "Elizabeth Igbinedion",
+    role: "Content team",
+    image: elizabethIgbinedion,
     category: "Content & Video",
     socials: { twitter: "#", linkedin: "#" },
   },

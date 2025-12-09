@@ -17,13 +17,13 @@ const About = () => {
   };
 
   return (
-    <section className="w-full py-16 xl:py-28 space-y-4">
+    <section className="w-full py-16 xl:py-28 space-y-4 overflow-x-hidden">
       <h2 className="text-3xl text-center md:text-4xl max-w-xl mx-auto lg:text-5xl font-bold">
         About Technova - Africa&apos;s Web3 Carnival
       </h2>
-      <div className="text-center max-w-3xl mx-auto relative grid grid-cols-2 gap-8 md:block">
-        <div className="col-span-2 p-4 md:p-0 md:w-full">
-          <p className="block w-full text-base md:text-lg leading-relaxed text-gray-600">
+      <div className="text-center max-w-3xl mx-auto  relative grid grid-cols-2 gap-8 lg:block">
+        <div className="col-span-2 p-4 lg:p-0 lg:w-full">
+          <p className="block w-full text-base lg:text-lg leading-relaxed text-gray-600">
             TechNova Africa&apos;s Web3 Carnival is more than just an event –
             it&apos;s a movement to position Africa at the forefront of
             blockchain innovation and decentralized technology. We&apos;re
@@ -40,7 +40,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="w-[158px] h-[100px] mx-auto md:absolute md:-left-40 md:-top-40"
+          className="w-[158px] h-[100px] mx-auto lg:absolute lg:-left-36 lg:-top-36"
         >
           <motion.div animate={floatingAnimation} className="w-full h-full">
             <Image
@@ -59,7 +59,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="w-[158px] h-[100px] mx-auto md:absolute md:-right-40 md:-top-40"
+          className="w-[158px] h-[100px] mx-auto lg:absolute lg:-right-40 lg:-top-40"
         >
           <motion.div
             animate={{
@@ -84,7 +84,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="w-[158px] h-[100px] mx-auto md:absolute md:-left-40 md:-bottom-20"
+          className="w-[158px] h-[100px] mx-auto lg:absolute lg:-left-40 lg:-bottom-20"
         >
           <motion.div
             animate={{
@@ -109,7 +109,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="w-[158px] h-[100px] mx-auto md:absolute md:-right-40 md:-bottom-20"
+          className="w-[158px] h-[100px] mx-auto lg:absolute lg:-right-40 lg:-bottom-20"
         >
           <motion.div
             animate={{

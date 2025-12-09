@@ -8,14 +8,14 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="bg-[#FFF9EA] flex-col min-h-[700px] overflow-y-hidden w-full flex items-center py-28">
+    <section className="bg-[#FFF9EA] flex-col h-[620px] lg:h-[680px] xl:h-[800px] overflow-y-hidden w-full flex items-center py-28">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="flex flex-col items-center z-10 relative"
       >
-        <h1 className="text-[36px] tracking-tighter md:tracking-normal text-center md:text-4xl max-w-3xl mx-auto lg:text-5xl xl:text-[65px] font-bold px-5 md:px-0">
+        <h1 className="text-[36px] leading-[1.2] tracking-tighter md:tracking-normal text-center md:text-4xl max-w-3xl mx-auto lg:text-5xl xl:text-[65px] font-bold px-5 md:px-0">
           Africa&apos;s Biggest Web3 Carnival of Innovation
         </h1>
         <div className="w-fit flex-wrap text-sm mt-5 flex justify-center gap-5 items-center">
@@ -30,27 +30,27 @@ const Hero = () => {
         </div>
       </motion.div>
 
-      <div className="-mt-5 h-full relative flex w-full justify-center">
+      <div className="-mt-5 h-full relative grid grid-cols-3 md:px-28 xl:px-0 w-full max-w-4xl mx-auto">
         {/* Left Artifact */}
         <motion.div
           initial={{ opacity: 0, x: -50, y: 50 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="absolute translate-y-[70%] md:translate-y-1/4 flex items-end left-0 w-[250px] md:left-[20%] xl:w-[500px] h-[250px] xl:h-[350px]"
+          className=""
         >
           <motion.div
-            animate={{ y: [0, -15, 0] }}
+            animate={{ y: [0, -9, 0] }}
             transition={{
               duration: 4,
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="w-full h-full"
+            className="w-full h-auto translate-y-34 xl:translate-y-16"
           >
             <Image
               src={artifact}
               alt="Artifact 1"
-              className="w-full h-full object-cover"
+              className="w-full h-auto object-cover"
             />
           </motion.div>
         </motion.div>
@@ -60,7 +60,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="absolute z-2 top-0 left-[18%] md:left-[28%] xl:w-[650px] h-[450px]"
+          className=""
         >
           <motion.div
             animate={{ y: [0, -20, 0] }}
@@ -70,7 +70,7 @@ const Hero = () => {
               ease: "easeInOut",
               delay: 0.5,
             }}
-            className="w-full h-full"
+            className="w-full flex items-center justify-center h-full xl:h-[650px]"
           >
             <Image
               src={artifact2}
@@ -85,17 +85,17 @@ const Hero = () => {
           initial={{ opacity: 0, x: 50, y: 50 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-          className="absolute flex items-end translate-y-[50%] right-0 md:right-[17%] w-[190px] md:w-[350px] h-[350px] md:h-[300px]"
+          className="xl:w-[350px] xl:h-[840px "
         >
           <motion.div
-            animate={{ y: [0, -15, 0] }}
+            animate={{ y: [0, -12, 0] }}
             transition={{
               duration: 4.5,
               repeat: Infinity,
               ease: "easeInOut",
               delay: 1,
             }}
-            className="w-full h-full"
+            className="w-full h-full translate-y-20 xl:translate-y-20 xl:w-[350px]"
           >
             <Image
               src={artifact3}

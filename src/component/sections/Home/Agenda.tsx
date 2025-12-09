@@ -8,9 +8,9 @@ export default function Agenda() {
   const [activeDay, setActiveDay] = useState("thursday");
 
   const days = [
-    { id: "thursday", label: "Thursday, 12th" },
-    { id: "friday", label: "Friday, 13th" },
-    { id: "saturday", label: "Saturday, 14th" },
+    { id: "thursday", label: "Thursday, 12th", color: "#F85B1A" },
+    { id: "friday", label: "Friday, 13th", color: "#FEC421" },
+    { id: "saturday", label: "Saturday, 14th", color: "#1BC2FF" },
   ];
 
   const eventsByDay = {
@@ -107,6 +107,7 @@ export default function Agenda() {
           <EventList
             events={eventsByDay[activeDay as keyof typeof eventsByDay]}
             activeDay={activeDay}
+            color={days.find((day) => day.id === activeDay)?.color || "#F85B1A"}
           />
         </div>
       </div>

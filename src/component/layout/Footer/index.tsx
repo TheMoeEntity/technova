@@ -9,7 +9,7 @@ import footerIcon from "@/assets/images/footer-icon.svg";
 export default function Footer() {
   return (
     <footer className="w-full bg-black text-white py-16 px-6 md:px-8">
-      <div className="max-w-6xl mx-auto flex flex-col gap-12 lg:flex-row justify-between md:items-center">
+      <div className="max-w-6xl mx-auto flex flex-col gap-12 md:flex-row justify-between xl:items-center">
         {/* Left section */}
         <div className="flex flex-col items-start gap-18">
           {/* LOGO */}
