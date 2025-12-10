@@ -195,7 +195,7 @@ export const teamMembers: TeamMember[] = [
 export const categories = [
   "All",
   "Core Team",
-  "Partnership",
+
   "Design",
   "Engineering",
   "Marketing",
