@@ -21,15 +21,11 @@ export enum Data {
 }
 export const links = [
   {
-    href: "/schedule",
-    label: "Schedule",
-  },
-  {
     href: "/team",
     label: "Team",
   },
   {
-    href: "/speakers",
+    href: "/#",
     label: "Speakers",
   },
   {
