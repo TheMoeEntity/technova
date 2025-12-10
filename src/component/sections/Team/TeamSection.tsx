@@ -97,6 +97,7 @@ export default function TeamSection() {
                     src={member.image || "/placeholder.svg"}
                     alt={member.name}
                     width={100}
+                    loading="lazy"
                     height={100}
                     className="w-24 h-24 rounded-lg object-cover object-top shadow-md"
                   />
@@ -166,6 +167,7 @@ export default function TeamSection() {
                   src={selectedMember.image || "/placeholder.svg"}
                   alt={selectedMember.name}
                   fill
+                  quality={100}
                   className="object-cover object-top"
                 />
               </motion.div>

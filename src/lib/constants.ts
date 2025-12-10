@@ -63,7 +63,7 @@ export const teamMembers: TeamMember[] = [
     name: "ENGR. Chuks Okoronkwo",
     role: "Programs Manager, TECHNOVA",
     image: chuksOkonkwo,
-    category: "Organising",
+    category: "Partnership",
     socials: { twitter: "#", linkedin: "#" },
   },
   {
@@ -117,7 +117,7 @@ export const teamMembers: TeamMember[] = [
     name: "Danny Amara",
     role: "SMM & Content, TECHNOVA",
     image: dannyAmara,
-    category: "Content & Video",
+    category: "Media",
     socials: {
       twitter: "https://x.com/apostleofdesign",
       youtube: "https://youtube.com/@apostleofdesign",
@@ -128,7 +128,7 @@ export const teamMembers: TeamMember[] = [
     name: "Opoke Daniel",
     role: "Operational Manager, TECHNOVA",
     image: opokeDaniel,
-    category: "Content & Video",
+    category: "Media",
     socials: {
       instagram: "https://www.instagram.com/dansparkcfr?igsh=NjBqZWI2ZjhwMGtu",
       twitter: " https://x.com/danspark_gmi?t=jzhDbXi23pVNZ3ZLHHQUeA&s=09",
@@ -139,7 +139,7 @@ export const teamMembers: TeamMember[] = [
     name: "Nenye Kingsley",
     role: "Content team",
     image: nenyeKingsley,
-    category: "Content & Video",
+    category: "Media",
     socials: {
       twitter: "https://x.com/NenyeKingsley?t=yPhzvPuI4AlMyBkdYhgyBg&s=09",
       linkedin:
@@ -151,7 +151,7 @@ export const teamMembers: TeamMember[] = [
     name: "Victor Ikem",
     role: "Visual Storyteller/ Media strategist",
     image: victorIkem,
-    category: "Content & Video",
+    category: "Media",
     socials: {
       facebook: "https://www.facebook.com/share/1G21c8cYDF/",
       instagram:
@@ -174,7 +174,7 @@ export const teamMembers: TeamMember[] = [
     name: "Elizabeth Igbinedion",
     role: "Content team",
     image: elizabethIgbinedion,
-    category: "Content & Video",
+    category: "Media",
     socials: {
       instagram: "https://www.instagram.com/liz_igbinedion",
     },
@@ -184,7 +184,7 @@ export const teamMembers: TeamMember[] = [
     name: "Kamso",
     role: "Content team",
     image: kamso,
-    category: "Content & Video",
+    category: "Media",
     socials: {
       tiktok: "https://www.tiktok.com/@thenameiskamso_?_r=1&_t=ZS-921x1ULbzrV",
       twitter: "https://x.com/thenameiskamso?s=21",
@@ -195,9 +195,9 @@ export const teamMembers: TeamMember[] = [
 export const categories = [
   "All",
   "Core Team",
-  "Organising",
+  "Partnership",
   "Design",
   "Engineering",
   "Marketing",
-  "Content & Video",
+  "Media",
 ];

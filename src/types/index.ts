@@ -5,7 +5,14 @@ export interface TeamMember {
   name: string;
   role: string;
   image: string | StaticImageData;
-  category: string;
+  category:
+    | "All"
+    | "Design"
+    | "Core Team"
+    | "Marketing"
+    | "Engineering"
+    | "Partnership"
+    | "Media";
   socials: {
     twitter?: string;
     linkedin?: string;
