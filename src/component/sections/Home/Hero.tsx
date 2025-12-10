@@ -1,5 +1,6 @@
 "use client";
-import { Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin, X } from "lucide-react";
+import { useState } from "react";
 import Image from "next/image";
 import artifact from "@/assets/images/artifact-1.svg";
 import artifact2 from "@/assets/images/artifact-2.svg";
@@ -7,6 +8,7 @@ import artifact3 from "@/assets/images/artifact-3.svg";
 import { motion } from "framer-motion";
 
 const Hero = () => {
+  const [showMap, setShowMap] = useState(false);
   return (
     <section className="bg-[#FFF9EA] flex-col h-[620px] lg:h-[680px] xl:h-[800px] overflow-y-hidden w-full flex items-center py-28">
       <motion.div
@@ -16,16 +18,20 @@ const Hero = () => {
         className="flex flex-col items-center z-10 relative"
       >
         <h1 className="text-[36px] leading-[1.2] tracking-tighter md:tracking-normal text-center md:text-4xl max-w-3xl mx-auto lg:text-5xl xl:text-[65px] font-bold px-5 md:px-0">
-          Africa&apos;s Biggest Web3 Carnival of Innovation
+          Africa&apos;s Biggest Carnival of Innovation
         </h1>
         <div className="w-fit flex-wrap text-sm mt-5 flex justify-center gap-5 items-center">
           <div className="flex border rounded-4xl border-gray-200 px-4 py-2 items-center gap-2">
             <Calendar />
             <span>March 12th-14th, 2026</span>
           </div>
-          <div className="flex border rounded-4xl border-gray-200 px-4 py-2 items-center gap-2">
+          <div
+            className="flex border rounded-4xl border-gray-200 px-4 py-2 items-center gap-2 cursor-pointer hover:bg-gray-50 transition-colors"
+            onClick={() => setShowMap(true)}
+          >
             <MapPin />
             <span>The Ecumenical Centre, Abakaliki</span>
+            {/* to-do: ad link to google maps */}
           </div>
         </div>
       </motion.div>
@@ -105,6 +111,33 @@ const Hero = () => {
           </motion.div>
         </motion.div>
       </div>
+
+      {showMap && (
+        <div
+          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+          onClick={() => setShowMap(false)}
+        >
+          <div
+            className="bg-white rounded-2xl w-full max-w-4xl h-[500px] relative overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setShowMap(false)}
+              className="absolute top-4 right-4 p-2 bg-white rounded-full shadow-lg hover:bg-gray-100 z-10"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <iframe
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              allowFullScreen
+              src="https://maps.google.com/maps?q=The%20Ecumenical%20Centre%2C%20Abakaliki&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            ></iframe>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
