@@ -1,4 +1,4 @@
-import React from "react";
+import ContactSection from "./ContactSection";
 
 const ContactUsPage = () => {
   return (
@@ -8,6 +8,9 @@ const ContactUsPage = () => {
         <p>
           Have questions? Want to get involved? We&apos;d love to hear from you!
         </p>
+        <div className="mt-6 py-5 mx-auto max-w-6xl w-full">
+          <ContactSection />
+        </div>
       </div>
     </div>
   );

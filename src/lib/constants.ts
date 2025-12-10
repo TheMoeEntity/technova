@@ -13,7 +13,12 @@ import odinmaMmesoma from "@/assets/images/odinma-mmesoma.svg";
 import victorIkem from "@/assets/images/victor-ikem.svg";
 import joshuaNwankwo from "@/assets/images/joshua-nwankwo.svg";
 import kamso from "@/assets/images/kamso.svg";
+import moses from "@/assets/images/moses-nwigberi-profile.jpeg";
 
+export enum Data {
+  Location = "The Ecumenical Centre, Abakaliki",
+  Mail = "contact@technovasummit.com",
+}
 export const links = [
   {
     href: "/schedule",
@@ -86,6 +91,17 @@ export const teamMembers: TeamMember[] = [
     socials: {
       twitter: "https://x.com/the_ellajames",
       website: "https://ellajames.framer.website/",
+    },
+  },
+  {
+    id: "15",
+    name: "Moses Nwigberi",
+    role: "Web Developer, TECHNOVA",
+    image: moses,
+    category: "Engineering",
+    socials: {
+      website: "https://mosesnwigberi.com",
+      linkedin: "https://linkedin.com/in/nwigber-moses",
     },
   },
   {

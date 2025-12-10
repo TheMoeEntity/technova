@@ -31,7 +31,6 @@ const Hero = () => {
           >
             <MapPin />
             <span>The Ecumenical Centre, Abakaliki</span>
-            {/* to-do: ad link to google maps */}
           </div>
         </div>
       </motion.div>
@@ -51,7 +50,7 @@ const Hero = () => {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="w-full h-auto translate-y-34 xl:translate-y-16"
+            className="w-full h-auto translate-y-34 xl:translate-y-40"
           >
             <Image
               src={artifact}

@@ -3,13 +3,13 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  X,
   Linkedin,
   Instagram,
   Facebook,
   Youtube,
   Globe,
   TwitterIcon,
+  X,
 } from "lucide-react";
 import { FaBehance } from "react-icons/fa";
 import { PiTiktokLogoBold } from "react-icons/pi";
@@ -41,6 +41,9 @@ const getSocialIcon = (platform: string) => {
 
 export default function TeamSection() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [selectedMember, setSelectedMember] = useState<
+    (typeof teamMembers)[0] | null
+  >(null);
 
   const filteredMembers =
     activeCategory === "All"
@@ -85,20 +88,22 @@ export default function TeamSection() {
               >
                 {/* Profile Image */}
                 <motion.div
-                  className="flex-shrink-0"
+                  className="shrink-0 cursor-pointer"
                   whileHover={{ scale: 1.05 }}
+                  layoutId={`image-${member.id}`}
+                  onClick={() => setSelectedMember(member)}
                 >
                   <Image
                     src={member.image || "/placeholder.svg"}
                     alt={member.name}
                     width={100}
                     height={100}
-                    className="w-24 h-24 rounded-lg object-cover shadow-md"
+                    className="w-24 h-24 rounded-lg object-cover object-top shadow-md"
                   />
                 </motion.div>
 
                 {/* Member Info */}
-                <div className="flex-grow">
+                <div className="grow">
                   <h3 className="text-2xl font-bold text-black mb-1">
                     {member.name}
                   </h3>
@@ -106,7 +111,7 @@ export default function TeamSection() {
                 </div>
 
                 {/* Social Links */}
-                <div className="flex gap-4 flex-col md:flex-row flex-shrink-0">
+                <div className="flex gap-4 flex-col md:flex-row shrink-0">
                   {Object.entries(member.socials).map(([platform, url]) => {
                     if (!url) return null;
                     return (
@@ -129,6 +134,69 @@ export default function TeamSection() {
           </AnimatePresence>
         </div>
       </div>
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {selectedMember && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedMember(null)}
+            className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              className="bg-white rounded-2xl overflow-hidden max-w-md w-full relative"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setSelectedMember(null)}
+                className="absolute top-4 right-4 p-2 bg-black/10 hover:bg-black/20 rounded-full transition-colors z-10"
+              >
+                <X size={20} />
+              </button>
+              <motion.div
+                layoutId={`image-${selectedMember.id}`}
+                className="relative h-120 w-full"
+              >
+                <Image
+                  src={selectedMember.image || "/placeholder.svg"}
+                  alt={selectedMember.name}
+                  fill
+                  className="object-cover object-top"
+                />
+              </motion.div>
+              <div className="px-6 py-3">
+                <h3 className="text-2xl font-bold text-black mb-1">
+                  {selectedMember.name}
+                </h3>
+                <p className="text-gray-600 mb-4">{selectedMember.role}</p>
+                <div className="flex gap-4">
+                  {Object.entries(selectedMember.socials).map(
+                    ([platform, url]) => {
+                      if (!url) return null;
+                      return (
+                        <a
+                          key={platform}
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 rounded-full bg-[#F5F5F5] text-black hover:bg-gray-200 transition-colors"
+                        >
+                          {getSocialIcon(platform)}
+                        </a>
+                      );
+                    }
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
