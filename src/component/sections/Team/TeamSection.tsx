@@ -27,6 +27,7 @@ import nenyeKingsley from "@/assets/images/nenye-kingsley.svg";
 import odinmaMmesoma from "@/assets/images/odinma-mmesoma.svg";
 import victorIkem from "@/assets/images/victor-ikem.svg";
 import joshuaNwankwo from "@/assets/images/joshua-nwankwo.svg";
+import kamso from "@/assets/images/kamso.svg";
 
 interface TeamMember {
   id: string;
@@ -174,6 +175,17 @@ const teamMembers: TeamMember[] = [
     category: "Content & Video",
     socials: {
       instagram: "https://www.instagram.com/liz_igbinedion",
+    },
+  },
+  {
+    id: "14",
+    name: "Kamso",
+    role: "Content team",
+    image: kamso,
+    category: "Content & Video",
+    socials: {
+      tiktok: "https://www.tiktok.com/@thenameiskamso_?_r=1&_t=ZS-921x1ULbzrV",
+      twitter: "https://x.com/thenameiskamso?s=21",
     },
   },
 ];
