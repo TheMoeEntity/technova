@@ -16,9 +16,8 @@ export default function Footer() {
           <Image
             src={technovalogo}
             alt="Tech Nova logo"
-            width={160}
-            height={80}
-            className="object-contain"
+            loading="lazy"
+            className="object-contain w-40 h-auto"
           />
 
           <div className="grid grid-cols-2 gap-x-20 xl:gap-x-40 gap-y-1 text-lg text-white">
@@ -39,8 +38,7 @@ export default function Footer() {
           <Image
             src={footerIcon}
             alt="Graphic"
-            width={180}
-            height={140}
+            loading="lazy"
             className="object-contain"
           />
 

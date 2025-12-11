@@ -49,7 +49,7 @@ export const teamMembers: TeamMember[] = [
   {
     id: "2",
     name: "Toochukwu Okoro",
-    role: "Founder and CEO, Azza",
+    role: "Founder and CEO, Azza. <br /> Cofounder, TECHNOVA",
     image: toochukwuOkoro,
     category: "Core Team",
     socials: { twitter: "#", linkedin: "#" },

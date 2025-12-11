@@ -28,7 +28,13 @@ const Header = () => {
   return (
     <header className="absolute top-0 left-0 right-0 flex w-full py-5 px-5 md:px-12 items-center gap-5 justify-between lg:justify-evenly z-50">
       <Link href="/" className="z-50">
-        <Image src={technovalogo} alt="Logo" width={95} height={95} />
+        <Image
+          src={technovalogo}
+          alt="Logo"
+          width={95}
+          height={95}
+          className="w-full h-auto"
+        />
       </Link>
 
       {/* Desktop Navigation */}
@@ -79,7 +85,10 @@ const Header = () => {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 bg-[#FFF9EA] z-40 flex flex-col items-center justify-center gap-8 lg:hidden"
           >
-            <button className="cursor-pointer" onClick={handleClick}>
+            <button
+              className="cursor-pointer text-2xl font-bold hover:text-orange-500 transition-colors"
+              onClick={handleClick}
+            >
               Schedule
             </button>
             {links.map((link) => (

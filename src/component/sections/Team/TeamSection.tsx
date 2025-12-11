@@ -11,6 +11,7 @@ import {
   TwitterIcon,
   X,
 } from "lucide-react";
+import DOMPurify from "isomorphic-dompurify";
 import { FaBehance } from "react-icons/fa";
 import { PiTiktokLogoBold } from "react-icons/pi";
 import Image from "next/image";
@@ -44,7 +45,7 @@ export default function TeamSection() {
   const [selectedMember, setSelectedMember] = useState<
     (typeof teamMembers)[0] | null
   >(null);
-
+  const sanitizedHTML = (content: string) => DOMPurify.sanitize(content);
   const filteredMembers =
     activeCategory === "All"
       ? teamMembers
@@ -99,16 +100,21 @@ export default function TeamSection() {
                     width={100}
                     loading="lazy"
                     height={100}
-                    className="w-24 h-24 rounded-lg object-cover object-top shadow-md"
+                    className="md:w-24 md:h-24 h-18 w-18 rounded-lg object-cover object-top shadow-md"
                   />
                 </motion.div>
 
                 {/* Member Info */}
                 <div className="grow">
-                  <h3 className="text-2xl font-bold text-black mb-1">
+                  <h3 className="text-xl md:text-2xl font-bold text-black mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-gray-600">{member.role}</p>
+                  <p
+                    className="text-gray-600"
+                    dangerouslySetInnerHTML={{
+                      __html: sanitizedHTML(member.role),
+                    }}
+                  />
                 </div>
 
                 {/* Social Links */}
@@ -161,7 +167,7 @@ export default function TeamSection() {
               </button>
               <motion.div
                 layoutId={`image-${selectedMember.id}`}
-                className="relative h-120 w-full"
+                className="relative h-[75vh] w-full"
               >
                 <Image
                   src={selectedMember.image || "/placeholder.svg"}

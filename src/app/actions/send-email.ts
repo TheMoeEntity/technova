@@ -1,36 +1,41 @@
 "use server";
 
+import nodemailer from "nodemailer";
+
 export async function sendContactEmail(data: {
   fullName: string;
   email: string;
   message: string;
 }) {
   try {
-    // Using Resend API - you'll need to set RESEND_API_KEY environment variable
-    const response = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+    const transporter = nodemailer.createTransport({
+      // host: process.env.SMTP_HOST,
+      service: "gmail",
+      port: Number(process.env.SMTP_PORT) || 587,
+      secure: process.env.SMTP_SECURE === "true", // true for 465, false for other ports
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
-      body: JSON.stringify({
-        from: "contact@technovasummit.com",
-        to: "contact@technovasummit.com",
-        subject: `New Contact Form Submission from ${data.fullName}`,
-        html: `
-          <h2>New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${data.fullName}</p>
-          <p><strong>Email:</strong> ${data.email}</p>
-          <p><strong>Message:</strong></p>
-          <p>${data.message.replace(/\n/g, "<br>")}</p>
-        `,
-        reply_to: data.email,
-      }),
     });
 
-    if (!response.ok) {
-      throw new Error("Failed to send email");
-    }
+    const mailOptions = {
+      from:
+        process.env.SMTP_FROM ||
+        '"TechNova Contact" <contact@technovasummit.com>',
+      to: "contact@technovasummit.com",
+      replyTo: data.email,
+      subject: `New Contact Form Submission from ${data.fullName}`,
+      html: `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${data.fullName}</p>
+        <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>Message:</strong></p>
+        <p>${data.message.replace(/\n/g, "<br>")}</p>
+      `,
+    };
+
+    await transporter.sendMail(mailOptions);
 
     return { success: true };
   } catch (error) {
