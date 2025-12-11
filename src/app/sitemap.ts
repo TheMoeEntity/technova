@@ -28,6 +28,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly" as const,
       priority: 1,
     },
+    {
+      url: url + "/generate-dp",
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 1,
+    },
+    {
+      url: url + "/speakers",
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 1,
+    },
   ];
 
   return [...staticPaths];
