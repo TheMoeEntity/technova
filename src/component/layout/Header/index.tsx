@@ -7,27 +7,13 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { usePathname, useRouter } from "next/navigation";
+import { useNavigateTo } from "@/hooks/useNavigateTo";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
-  const currPath = usePathname();
-  const isHome = currPath === "/";
-  const { push } = useRouter();
-
-  const handleClick = () => {
-    if (!isHome) {
-      push("/");
-      setTimeout(() => {
-        window.dispatchEvent(new CustomEvent("scrollToElement"));
-      }, 750);
-    } else {
-      window.dispatchEvent(new CustomEvent("scrollToElement"));
-    }
-    setIsOpen(false);
-  };
+  const { createHandler } = useNavigateTo();
 
   return (
     <header className="absolute top-0 left-0 right-0 flex w-full py-5 px-5 md:px-12 items-center gap-5 justify-between lg:justify-evenly z-50">
@@ -45,7 +31,9 @@ const Header = () => {
       <div className="hidden lg:flex gap-10 items-center">
         <button
           className="cursor-pointer hover:text-orange-500 transition-colors"
-          onClick={handleClick}
+          onClick={() =>
+            createHandler("scrollToSchedule", () => setIsOpen(false))
+          }
         >
           Schedule
         </button>
@@ -131,7 +119,9 @@ const Header = () => {
           >
             <button
               className="cursor-pointer text-2xl font-bold hover:text-orange-500 transition-colors"
-              onClick={handleClick}
+              onClick={() =>
+                createHandler("scrollToSchedule", () => setIsOpen(false))
+              }
             >
               Schedule
             </button>

@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
+import { useScrollTo } from "@/hooks/useScrollTo";
 
 interface FAQItem {
   id: string;
@@ -51,7 +52,8 @@ const faqData: FAQItem[] = [
 
 export default function FAQSection() {
   const [expandedId, setExpandedId] = useState("1");
-
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  useScrollTo(containerRef, "scrollToFAQ");
   const toggleExpand = (id: string) => {
     setExpandedId(expandedId === id ? "" : id);
   };
@@ -66,7 +68,10 @@ export default function FAQSection() {
         </div>
 
         {/* FAQ Items */}
-        <div className="flex flex-col gap-4 bg-orange-50 rounded-3xl py-8">
+        <div
+          ref={containerRef}
+          className="flex flex-col gap-4 bg-orange-50 rounded-3xl py-8"
+        >
           <AnimatePresence mode="wait">
             {faqData.map((item) => (
               <div key={item.id}>

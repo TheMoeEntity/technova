@@ -18,7 +18,9 @@
     --foreground: #ededed;
   }
 } */
-
+button {
+  cursor: pointer;
+}
 body {
   background: #ffffff;
   color: #171717;

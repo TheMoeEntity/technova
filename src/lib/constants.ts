@@ -20,6 +20,13 @@ export enum Data {
   Mail = "contact@technovasummit.com",
   BASEURL = "https://technovasummit.com",
 }
+export enum SOCIALS {
+  X = "https://x.com/TechNovasummit",
+  LINKEDIN = "https://www.linkedin.com/in/technova-summit-4aa6b5380",
+  INSTAGRAM = "https://www.instagram.com/Technovasummit",
+  TIKTOK = "https://tiktok.com/@technovasummit",
+  FACEBOOK = "https://www.facebook.com/TechNova%20summit",
+}
 export const OG_Image = Data.BASEURL + "/og_image.png";
 export const links = [
   {

@@ -3,7 +3,8 @@
 import { useEffect } from "react";
 
 export const useScrollTo = (
-  containerRef: React.RefObject<HTMLDivElement | null>
+  containerRef: React.RefObject<HTMLDivElement | null>,
+  eventName: string
 ) => {
   useEffect(() => {
     const handleScrollToElement = () => {
@@ -13,8 +14,7 @@ export const useScrollTo = (
       });
     };
 
-    window.addEventListener("scrollToElement", handleScrollToElement);
-    return () =>
-      window.removeEventListener("scrollToElement", handleScrollToElement);
+    window.addEventListener(eventName, handleScrollToElement);
+    return () => window.removeEventListener(eventName, handleScrollToElement);
   }, [containerRef]);
 };

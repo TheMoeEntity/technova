@@ -80,7 +80,7 @@ export default function Agenda() {
     ],
   };
   const containerRef = useRef<HTMLDivElement | null>(null);
-  useScrollTo(containerRef);
+  useScrollTo(containerRef, "scrollToSchedule");
   return (
     <div
       ref={containerRef}
