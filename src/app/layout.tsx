@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Bricolage_Grotesque } from "next/font/google";
 import AppLayout from "@/component/layout/AppLayout";
-import { description } from "@/lib/constants";
+import { description, OG_Image } from "@/lib/constants";
 const bricolageGrotesque = Bricolage_Grotesque({
   variable: "--font-bricolage-grotesque",
   subsets: ["latin"],
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://technovasummit.com/TechNova-Summit-OG.jpg",
+        url: OG_Image,
         width: 1200,
         height: 630,
         alt: "TechNova Tech Event Space",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TechNova Summit | Tech Event",
     description,
-    images: ["https://technovasummit.com/TechNova-Summit-OG.jpg"],
+    images: [OG_Image],
   },
   metadataBase: new URL("https://technovasummit.com"),
 };

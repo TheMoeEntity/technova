@@ -18,7 +18,9 @@ import moses from "@/assets/images/moses-nwigberi-profile.jpeg";
 export enum Data {
   Location = "The Ecumenical Centre, Abakaliki",
   Mail = "contact@technovasummit.com",
+  BASEURL = "https://technovasummit.com",
 }
+export const OG_Image = Data.BASEURL + "/og_image.png";
 export const links = [
   {
     href: "/team",
