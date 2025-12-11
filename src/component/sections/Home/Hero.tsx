@@ -6,6 +6,7 @@ import artifact from "@/assets/images/artifact-1.svg";
 import artifact2 from "@/assets/images/artifact-2.svg";
 import artifact3 from "@/assets/images/artifact-3.svg";
 import { motion } from "framer-motion";
+import { Data } from "@/lib/constants";
 
 const Hero = () => {
   const [showMap, setShowMap] = useState(false);
@@ -26,11 +27,12 @@ const Hero = () => {
             <span>March 12th-14th, 2026</span>
           </div>
           <div
+            title="Click to view location"
             className="flex border rounded-4xl border-gray-200 px-4 py-2 items-center gap-2 cursor-pointer hover:bg-gray-50 transition-colors"
             onClick={() => setShowMap(true)}
           >
             <MapPin />
-            <span>The Ecumenical Centre, Abakaliki</span>
+            <span>{Data.Location}</span>
           </div>
         </div>
       </motion.div>
@@ -132,7 +134,7 @@ const Hero = () => {
               style={{ border: 0 }}
               loading="lazy"
               allowFullScreen
-              src="https://maps.google.com/maps?q=The%20Ecumenical%20Centre%2C%20Abakaliki&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.6788608334996!2d8.099764274404285!3d6.305856025655486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x105ca1c82df8624b%3A0x8be70605f90b09b3!2sEbonyi%20State%20Ecumenical%20Center!5e0!3m2!1sen!2sng!4v1765416549266!5m2!1sen!2sng"
             ></iframe>
           </div>
         </div>
