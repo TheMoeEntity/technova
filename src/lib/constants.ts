@@ -14,6 +14,8 @@ import victorIkem from "@/assets/images/victor-ikem.svg";
 import joshuaNwankwo from "@/assets/images/joshua-nwankwo.svg";
 import kamso from "@/assets/images/kamso.svg";
 import moses from "@/assets/images/moses-nwigberi-profile.jpeg";
+import blaise from "@/assets/images/blaise.svg";
+import emmanuelIkenna from "@/assets/images/emmanuel ikenna.svg";
 
 export enum Data {
   Location = "The Ecumenical Centre, Abakaliki",
@@ -95,6 +97,14 @@ export const teamMembers: TeamMember[] = [
     socials: { twitter: "#", linkedin: "#" },
   },
   {
+    id: "21",
+    name: "Emmanuel Ikenna",
+    role: "Co-founder DTCSI Academy",
+    image: emmanuelIkenna,
+    category: "Partnership",
+    socials: { twitter: "#", linkedin: "#" },
+  },
+  {
     id: "4",
     name: "Zebulun",
     role: "Creative director TECHNOVA",
@@ -107,7 +117,7 @@ export const teamMembers: TeamMember[] = [
     name: "Udu Uduma Samuel",
     role: "Partnerships and Collaborations",
     image: uduUdumaSamuel,
-    category: "Core Team",
+    category: "Partnership",
     socials: { twitter: "#", linkedin: "#" },
   },
   {
@@ -122,7 +132,7 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
-    id: "15",
+    id: "22",
     name: "Moses Nwigberi",
     role: "Web Developer, TECHNOVA",
     image: moses,
@@ -145,7 +155,7 @@ export const teamMembers: TeamMember[] = [
     name: "Danny Amara",
     role: "SMM & Content, TECHNOVA",
     image: dannyAmara,
-    category: "Media",
+    category: "Marketing",
     socials: {
       twitter: "https://x.com/apostleofdesign",
       youtube: "https://youtube.com/@apostleofdesign",
@@ -156,7 +166,7 @@ export const teamMembers: TeamMember[] = [
     name: "Opoke Daniel",
     role: "Operational Manager, TECHNOVA",
     image: opokeDaniel,
-    category: "Media",
+    category: "Partnership",
     socials: {
       instagram: "https://www.instagram.com/dansparkcfr?igsh=NjBqZWI2ZjhwMGtu",
       twitter: " https://x.com/danspark_gmi?t=jzhDbXi23pVNZ3ZLHHQUeA&s=09",
@@ -217,6 +227,14 @@ export const teamMembers: TeamMember[] = [
       tiktok: "https://www.tiktok.com/@thenameiskamso_?_r=1&_t=ZS-921x1ULbzrV",
       twitter: "https://x.com/thenameiskamso?s=21",
     },
+  },
+  {
+    id: "15",
+    name: "Mbachu Blaise",
+    role: "Designer",
+    image: blaise,
+    category: "Design",
+    socials: { twitter: "#", linkedin: "#" },
   },
 ];
 

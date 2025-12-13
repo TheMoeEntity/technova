@@ -18,7 +18,7 @@ const Hero = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="flex flex-col items-center z-10 relative"
       >
-        <h1 className="text-[36px] leading-[1.2] tracking-tighter md:tracking-normal text-center md:text-4xl max-w-3xl mx-auto lg:text-5xl xl:text-[65px] font-bold px-5 md:px-0">
+        <h1 className="text-[36px] leading-[1.2] md:leading-none tracking-tighter md:tracking-[0.8px] text-center md:text-4xl max-w-3xl mx-auto lg:text-5xl xl:text-[65px] font-bold px-5 md:px-0">
           Africa&apos;s Biggest Carnival of Innovation
         </h1>
         <div className="w-fit flex-wrap text-sm mt-5 flex justify-center gap-5 items-center">

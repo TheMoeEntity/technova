@@ -14,7 +14,6 @@ const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
   const { createHandler } = useNavigateTo();
-
   return (
     <header className="absolute top-0 left-0 right-0 flex w-full py-5 px-5 md:px-12 items-center gap-5 justify-between lg:justify-evenly z-50">
       <Link href="/" className="z-50">
@@ -31,9 +30,7 @@ const Header = () => {
       <div className="hidden lg:flex gap-10 items-center">
         <button
           className="cursor-pointer hover:text-orange-500 transition-colors"
-          onClick={() =>
-            createHandler("scrollToSchedule", () => setIsOpen(false))
-          }
+          onClick={createHandler("scrollToSchedule")}
         >
           Schedule
         </button>
