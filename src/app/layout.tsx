@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Bricolage_Grotesque } from "next/font/google";
 import AppLayout from "@/component/layout/AppLayout";
-import { description, OG_Image } from "@/lib/constants";
+import { description, OG_Image, OG_Image_alt } from "@/lib/constants";
 const bricolageGrotesque = Bricolage_Grotesque({
   variable: "--font-bricolage-grotesque",
   subsets: ["latin"],
@@ -14,7 +14,10 @@ export const metadata: Metadata = {
   applicationName: "The TechNova Summit",
   keywords:
     "Tech Conference in Abakaliki, Event Venue, Workshops, Networking Events, Technology Events, Tech Summit, Innovation Hub, Tech Enthusiasts, DTCSI Academy",
-  authors: [{ name: "TechNova" }],
+  authors: [
+    { name: "Moses Nwigberi", url: "https://mosesnwigberi.com" },
+    { name: "TechNova" },
+  ],
   creator: "TechNova Team",
   icons: {
     icon: [
@@ -33,7 +36,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: OG_Image,
+        url: OG_Image_alt,
         width: 1200,
         height: 630,
         alt: "TechNova Tech Event Space",
@@ -44,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TechNova Summit | Tech Event",
     description,
-    images: [OG_Image],
+    images: [OG_Image_alt],
   },
   metadataBase: new URL("https://technovasummit.com"),
 };

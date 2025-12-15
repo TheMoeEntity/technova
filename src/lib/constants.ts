@@ -32,6 +32,7 @@ export enum SOCIALS {
   FACEBOOK = "https://www.facebook.com/TechNova%20summit",
 }
 export const OG_Image = Data.BASEURL + "/og_image.png";
+export const OG_Image_alt = Data.BASEURL + "/og_image_alt.png";
 export const links = [
   {
     href: "/team",
@@ -57,7 +58,7 @@ export const getInvolvedLinks = [
     label: "Become a Sponsor",
   },
   {
-    href: "/speakers",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLSfhdwYkiZ0WYaIuGh5gceHotNJQHbKtDk8dyfZos6xPkQOwhA/viewform",
     label: "Become a Speaker",
   },
   {
@@ -65,7 +66,7 @@ export const getInvolvedLinks = [
     label: "Become a Volunteer",
   },
   {
-    href: "/#",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLSfddvNFt1OfW-Ki2fOta2YKDzN7g9YFaLjQ6I1Ksz6JIZKdtg/viewform",
     label: "Become an Exhibitor",
   },
 ];
