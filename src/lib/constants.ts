@@ -21,7 +21,7 @@ import amara2 from "@/assets/images/amara.jpeg";
 
 export enum Data {
   Location = "The Ecumenical Centre, Abakaliki",
-  Mail = "contact@technovasummit.com",
+  Mail = "thetechnovasummit@gmail.com",
   BASEURL = "https://technovasummit.com",
 }
 export enum SOCIALS {

@@ -1,5 +1,6 @@
 "use server";
 
+import { Data } from "@/lib/constants";
 import nodemailer from "nodemailer";
 
 export async function sendContactEmail(data: {
@@ -22,8 +23,8 @@ export async function sendContactEmail(data: {
     const mailOptions = {
       from:
         process.env.SMTP_FROM ||
-        '"TechNova Contact" <contact@technovasummit.com>',
-      to: "contact@technovasummit.com",
+        '"TechNova Contact" <support@technovasummit.com>',
+      to: Data.Mail,
       replyTo: data.email,
       subject: `New Contact Form Submission from ${data.fullName}`,
       html: `

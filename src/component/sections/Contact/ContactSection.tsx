@@ -17,7 +17,7 @@ import * as z from "zod";
 import { toast } from "sonner";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { Data } from "@/lib/constants";
+import { Data, SOCIALS } from "@/lib/constants";
 
 const formSchema = z.object({
   fullName: z.string().min(2, "Full name must be at least 2 characters"),
@@ -63,10 +63,10 @@ export default function ContactSection() {
   };
 
   const socialLinks = [
-    { icon: TwitterIcon, href: "#", label: "X" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: PiTiktokLogoBold, href: "#", label: "Tiktok" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: TwitterIcon, href: SOCIALS.X, label: "X" },
+    { icon: Instagram, href: SOCIALS.INSTAGRAM, label: "Instagram" },
+    { icon: PiTiktokLogoBold, href: SOCIALS.TIKTOK, label: "Tiktok" },
+    { icon: Linkedin, href: SOCIALS.LINKEDIN, label: "LinkedIn" },
   ];
 
   function cn(...inputs: (string | undefined | null | false)[]) {
@@ -121,6 +121,8 @@ export default function ContactSection() {
                   <motion.a
                     key={idx}
                     href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     className="w-12 h-12 bg-black rounded-full flex items-center justify-center text-white hover:bg-gray-800 transition-colors"
