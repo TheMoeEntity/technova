@@ -16,18 +16,66 @@ export default function Agenda() {
 
   const eventsByDay = {
     thursday: [
-      { title: "Carnival Showcase Kickoff", time: "9:00 AM" },
-      { title: "Trade Fair", time: "11:00 AM" },
-      { title: "Pitch Competition", time: "2:00 PM" },
-      { title: "Investor Meetup", time: "4:00 PM" },
-      { title: "Evening Social & Entertainment", time: "6:00 PM" },
+      { title: "Arrivals | Guest Checkin", time: "9:00 -10:00 AM" },
+      {
+        title: "Opening Prayer | Ribbon cutting for exhibition area",
+        time: "10:00 - 11:00 AM",
+      },
+      { title: "Vendors officially open", time: "11:00 - 11:30 AM" },
+      {
+        title: "The Future of trade and commerce | intermittent talk",
+        time: "11:30 - 12:00 PM",
+      },
+      {
+        title: "Live Demo 1 [AgroTech/Green innovation]",
+        time: "12:00 - 12:30 PM",
+      },
+      {
+        title: "Tech Trivials | Spin the wheel (interactive games)",
+        time: "12:30 - 1:00 PM",
+      },
+      {
+        title: "Cultural Performance 1",
+        time: "1:00 - 1:30 PM",
+      },
+      {
+        title: "Digital skills for SMEs | intermittent talk",
+        time: "1:30 - 2:00 PM",
+      },
+      {
+        title: "Live Demo 2 [Commerce/Fintech]",
+        time: "2:00 -2:30 PM",
+      },
+      {
+        title: "Cultural Performance",
+        time: "2:30 -3:00 PM",
+      },
+      {
+        title: "Cultural Performance",
+        time: "3:00 -3:30 PM",
+      },
+      {
+        title: "Networking | Photo Ops",
+        time: "3:30 -4:00 PM",
+      },
+      {
+        title: "Media Interviews & Wrap ups",
+        time: "4:00 - 5:00 PM",
+      },
     ],
     friday: [
-      { title: "Hackathon Kickoff", time: "9:00 AM" },
-      { title: "Masterclass:DeFi Fundamentals", time: "11:00 AM" },
-      { title: "Pitch Competition", time: "2:00 PM" },
-      { title: "Investor Meetup", time: "4:00 PM" },
-      { title: "Evening Social & Entertainment", time: "6:00 PM" },
+      { title: "Arrivals | Guest Checkin", time: "9:00 -10:00 AM" },
+      { title: "Booth Reopening | DJ morning vibes", time: "10:00 - 10:30 AM" },
+      { title: "Cultural Performance 1", time: "10:30 - 11:00 AM" },
+      { title: "Cultural Performance 2", time: "11:00 - 11:30 AM" },
+      { title: "Vendor DEALS HOUR", time: "11:30 - 12:30 PM" },
+      { title: "Demo Session 1", time: "12:30 - 1:00 PM" },
+      { title: "Startup pitch session", time: "12:30 - 1:30 PM" },
+      { title: "Mega Raffles", time: "2:00 - 2:30 PM" },
+      { title: "Vendor Showcase/advert", time: "2:30 - 3:00 PM" },
+      { title: "Cultural Performance 3", time: "3:00 - 3:30 PM" },
+      { title: "Startup/Vendor Award Presentation", time: "3:30 - 4:00 PM" },
+      { title: "Closing Remarks | Music", time: "4:00 - 5:00 PM" },
     ],
     saturday: [
       { title: "Arrivals/Registration", time: "8:00 - 9:00 AM" },
