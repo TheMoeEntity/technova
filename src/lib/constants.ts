@@ -234,7 +234,10 @@ export const teamMembers: TeamMember[] = [
     role: "Designer",
     image: blaise,
     category: "Design",
-    socials: { twitter: "#", linkedin: "#" },
+    socials: {
+      behance: "https://www.behance.net/blaisedits",
+      instagram: "https://instagram.com/blaise_edits?igshid=MzRlODBiNWFlZA==",
+    },
   },
 ];
 
