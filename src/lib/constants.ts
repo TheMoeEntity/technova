@@ -16,6 +16,8 @@ import kamso from "@/assets/images/kamso.svg";
 import moses from "@/assets/images/moses-nwigberi-profile.jpeg";
 import blaise from "@/assets/images/blaise.svg";
 import emmanuelIkenna from "@/assets/images/emmanuel ikenna.svg";
+import okeke from "@/assets/images/okeke-kelechi.jpeg";
+import amara2 from "@/assets/images/amara.jpeg";
 
 export enum Data {
   Location = "The Ecumenical Centre, Abakaliki",
@@ -162,6 +164,16 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
+    id: "17",
+    name: "Amhara",
+    role: "Marketing, TECHNOVA",
+    image: okeke,
+    category: "Marketing",
+    socials: {
+      twitter: "https://x.com/theamahra?s=21&t=0diAYlYXq9Ef7HsvoAJLrg",
+    },
+  },
+  {
     id: "9",
     name: "Opoke Daniel",
     role: "Operational Manager, TECHNOVA",
@@ -239,12 +251,22 @@ export const teamMembers: TeamMember[] = [
       instagram: "https://instagram.com/blaise_edits?igshid=MzRlODBiNWFlZA==",
     },
   },
+  {
+    id: "16",
+    name: "Okeke Kelechi Daniel",
+    role: "Designer",
+    image: okeke,
+    category: "Design",
+    socials: {
+      twitter: "https://x.com/novaprayerr",
+      instagram: "https://www.instagram.com/novaprayer/",
+    },
+  },
 ];
 
 export const categories = [
   "All",
   "Core Team",
-
   "Design",
   "Engineering",
   "Marketing",
