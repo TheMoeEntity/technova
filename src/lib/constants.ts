@@ -167,7 +167,7 @@ export const teamMembers: TeamMember[] = [
     id: "17",
     name: "Amhara",
     role: "Marketing, TECHNOVA",
-    image: okeke,
+    image: amara2,
     category: "Marketing",
     socials: {
       twitter: "https://x.com/theamahra?s=21&t=0diAYlYXq9Ef7HsvoAJLrg",
