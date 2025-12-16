@@ -33,8 +33,7 @@ const faqData: FAQItem[] = [
   {
     id: "4",
     question: "Is there a registration fee?",
-    answer:
-      "Registration fees vary depending on the ticket type. Early bird tickets are discounted, and we offer student and group discounts. Check our website for current pricing and available ticket options.",
+    answer: "There's no fee! We believe in inclusivity and accessibility.",
   },
   {
     id: "5",
