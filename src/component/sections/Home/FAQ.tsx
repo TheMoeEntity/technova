@@ -33,7 +33,8 @@ const faqData: FAQItem[] = [
   {
     id: "4",
     question: "Is there a registration fee?",
-    answer: "There's no fee! We believe in inclusivity and accessibility.",
+    answer:
+      "There's no registration fee for Technova. It's completely free and open to anyone eager to be part of Africa's growing innovation ecosystem.",
   },
   {
     id: "5",
