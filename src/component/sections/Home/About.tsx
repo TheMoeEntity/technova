@@ -19,23 +19,28 @@ const About = () => {
   return (
     <section className="w-full py-16 xl:py-28 space-y-4 overflow-x-hidden">
       <h2 className="text-3xl text-center md:text-4xl max-w-xl mx-auto lg:text-5xl font-bold">
-        About Technova - Africa&apos;s Web3 Carnival
+        About Technova
       </h2>
       <div className="text-center max-w-3xl mx-auto  relative grid grid-cols-2 gap-8 lg:block">
         <div className="col-span-2 p-4 lg:p-0 lg:w-full">
           <p className="block w-full text-base lg:text-lg leading-relaxed text-gray-600">
-            TechNova Africa&apos;s Web3 Carnival is more than just an event –
-            it&apos;s a movement to position Africa at the forefront of
-            blockchain innovation and decentralized technology. We&apos;re
-            bringing together visionaries, developers, entrepreneurs, and
-            enthusiasts to explore the limitless possibilities of Web3, foster
-            collaboration, and build solutions that will shape Africa&apos;s
-            digital future.
+            More than a conference, Technova is a multi-day experience designed
+            to educate, inspire, and unlock real opportunities for the next
+            generation of African talent. Born in Ebonyi State and built with a
+            continental vision, Technova Summit brings together students,
+            professionals, creators, founders, institutions, and global
+            ecosystem players to explore the technologies, ideas, and skills
+            shaping the future of work and innovation in Africa. Across
+            immersive experiences including trade fairs, exhibitions, bootcamps,
+            cultural showcases, and a flagship conference, Technova creates an
+            accessible entry point into today’s most important innovation
+            conversations, meeting people where they are and guiding them toward
+            what’s next.
           </p>
         </div>
 
         {/* Top Left - Speakers */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, x: -50, y: -50 }}
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           viewport={{ once: true }}
@@ -51,10 +56,10 @@ const About = () => {
               className="w-full h-auto"
             />
           </motion.div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Top Right - Days */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, x: 50, y: -50 }}
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           viewport={{ once: true }}
@@ -76,10 +81,10 @@ const About = () => {
               className="w-full h-auto"
             />
           </motion.div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Bottom Left - Projects */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, x: -50, y: 50 }}
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           viewport={{ once: true }}
@@ -101,10 +106,10 @@ const About = () => {
               className="w-full h-auto"
             />
           </motion.div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Bottom Right - Participants */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, x: 50, y: 50 }}
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           viewport={{ once: true }}
@@ -126,7 +131,7 @@ const About = () => {
               className="w-full h-auto"
             />
           </motion.div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

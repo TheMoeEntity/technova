@@ -11,15 +11,15 @@ import { Data } from "@/lib/constants";
 const Hero = () => {
   const [showMap, setShowMap] = useState(false);
   return (
-    <section className="bg-[#FFF9EA] flex-col h-[620px] lg:h-[680px] xl:h-[800px] overflow-y-hidden w-full flex items-center py-28">
+    <section className="bg-[#FFF9EA] flex-col h-[870px] lg:h-[680px] xl:h-[1000px] overflow-y-hidden w-full flex items-center py-28">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="flex flex-col items-center z-10 relative"
       >
-        <h1 className="text-[36px] leading-[1.2] md:leading-none tracking-tighter md:tracking-[0.8px] text-center md:text-4xl max-w-3xl mx-auto lg:text-5xl xl:text-[65px] font-bold px-5 md:px-0">
-          Africa&apos;s Biggest Carnival of Innovation
+        <h1 className="text-[36px] leading-[1.2] md:leading-none tracking-tighter md:tracking-[0.8px] text-center md:text-4xl max-w-5xl mx-auto lg:text-5xl xl:text-[60px] font-bold px-5 md:px-0 xl:px-10">
+          Africa&apos;s Biggest Carnival of Tech, Innovation & Opportunity
         </h1>
         <div className="w-fit flex-wrap text-sm mt-5 flex justify-center gap-5 items-center">
           <div className="flex border rounded-4xl border-gray-200 px-4 py-2 items-center gap-2">
@@ -36,8 +36,18 @@ const Hero = () => {
           </div>
         </div>
       </motion.div>
-
-      <div className="-mt-5 h-full relative grid grid-cols-3 md:px-28 xl:px-0 w-full max-w-4xl mx-auto">
+      <div className="flex items-center gap-5 mt-14">
+        <a href="" className="px-6 py-2 bg-black text-white rounded-lg">
+          Register Now
+        </a>
+        <a
+          href=""
+          className="px-6 py-2 bg-[#FFEFC1] border-[#FFC520] border text-black rounded-lg"
+        >
+          Become a Partner
+        </a>
+      </div>
+      <div className="mt-[100px] h-full relative grid grid-cols-3 md:px-28 xl:px-0 w-full max-w-4xl mx-auto">
         {/* Left Artifact */}
         <motion.div
           initial={{ opacity: 0, x: -50, y: 50 }}

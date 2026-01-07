@@ -13,37 +13,44 @@ const attendeeAssets: {
   color: string;
   border: string;
   hoverBorder: string;
+  iconColor: string;
 }[] = [
   {
-    title: "Developers & Designers",
+    title: "Technology & Innovation",
     description:
-      "Blockchain developers, designers, smart contract engineers, and builders.",
+      "Emerging technologies, digital tools, software, AI, and Web3 explained clearly and practically.",
     color: "#FFF2ED",
+    iconColor: "#F85B1A",
     icon: iconsDev,
     border: "border border-transparent",
     hoverBorder: "hover:border-[#F85B1A]",
   },
   {
-    title: "Entrepreneurs",
+    title: "Markets, Finance & Digital Assets",
     description:
-      "Learn trends, network, and explore the world of decentralized innovation.",
+      "Fintech, digital markets, financial literacy, and evolving economic opportunities.",
     color: "#FFFBEE",
+    iconColor: "#FEC421",
     icon: iconsent,
     border: "border border-transparent",
     hoverBorder: "hover:border-[#FEC421]",
   },
   {
-    title: "Students",
-    description: "University students eager to learn blockchain technology.",
+    title: "Law, Policy & Trust",
+    description:
+      "Regulation, compliance, intellectual property, and the legal systems that support sustainable innovation.",
     color: "#EDFBFF",
+    iconColor: "#1BC2FF",
     icon: iconStudents,
     border: "border border-transparent",
     hoverBorder: "hover:border-[#1BC2FF]",
   },
   {
-    title: "Investors",
-    description: "VCs, angel investors, and Web3 stakeholders across Africa.",
+    title: "Creators, Media & Community",
+    description:
+      "Storytelling, branding, digital creativity, and community driven economies.",
     color: "#EBFBF6",
+    iconColor: "#00CE86",
     icon: iconInvestors,
     border: "border border-transparent",
     hoverBorder: "hover:border-[#00CE86]",
@@ -74,9 +81,9 @@ const Attendees = () => {
   };
 
   return (
-    <section className="w-full py-8 xl:pb-28 xl:pt-16">
+    <section className="w-full py-24 xl:pb-28 xl:pt-16">
       <h2 className="text-center text-4xl max-w-xl mx-auto lg:text-5xl font-bold">
-        Who Should Attend?
+        What we Explore
       </h2>
       <motion.div
         variants={containerVariants}
@@ -85,7 +92,7 @@ const Attendees = () => {
         viewport={{ once: true, margin: "-100px" }}
         className="grid grid-cols-1 px-4 md:px-0 mt-20 md:grid-cols-2 gap-5 md:gap-8 mx-auto max-w-5xl"
       >
-        {attendeeAssets.map((asset) => {
+        {attendeeAssets.map((asset, index) => {
           return (
             <motion.div
               key={asset.hoverBorder}
@@ -100,14 +107,11 @@ const Attendees = () => {
         ${asset.hoverBorder}
       `}
             >
-              <div className="w-10 h-10">
-                <Image
-                  src={asset.icon || "/placeholder.svg"}
-                  alt={asset.title}
-                  width={40}
-                  height={40}
-                  className="w-full h-auto"
-                />
+              <div
+                style={{ backgroundColor: asset.iconColor }}
+                className="w-10 h-10 text-lg flex justify-center items-center rounded-full text-white"
+              >
+                {index + 1}
               </div>
 
               <h3 className="text-2xl font-bold mt-6">{asset.title}</h3>
