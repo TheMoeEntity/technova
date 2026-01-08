@@ -11,7 +11,7 @@ import { Data } from "@/lib/constants";
 const Hero = () => {
   const [showMap, setShowMap] = useState(false);
   return (
-    <section className="bg-[#FFF9EA] flex-col h-[870px] lg:h-[680px] xl:h-[1000px] overflow-y-hidden w-full flex items-center py-28">
+    <section className="bg-[#FFF9EA] flex-col h-[888px] lg:h-[680px] xl:h-[1000px] overflow-y-hidden w-full flex items-center py-28">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -105,7 +105,7 @@ const Hero = () => {
           className="xl:w-[350px] xl:h-[840px "
         >
           <motion.div
-            animate={{ y: [0, -12, 0] }}
+            animate={{ y: [0, -8, 0] }}
             transition={{
               duration: 4.5,
               repeat: Infinity,

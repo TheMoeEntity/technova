@@ -81,7 +81,7 @@ const Attendees = () => {
   };
 
   return (
-    <section className="w-full py-24 xl:pb-28 xl:pt-16">
+    <section className="w-full py-24 xl:pb-28 xl:pt-16 bg-[#FFFCF5]">
       <h2 className="text-center text-4xl max-w-xl mx-auto lg:text-5xl font-bold">
         What we Explore
       </h2>

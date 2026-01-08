@@ -46,7 +46,7 @@ export function CategoryCard({
     <motion.div
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="relative h-64 overflow-hidden rounded-3xl shadow-lg cursor-pointer"
+      className="relative h-64 overflow-hidden rounded-3xl cursor-pointer"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}

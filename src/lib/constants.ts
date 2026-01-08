@@ -39,7 +39,7 @@ export const links = [
     label: "Team",
   },
   {
-    href: "/#",
+    href: "/speakers",
     label: "Speakers",
   },
   {

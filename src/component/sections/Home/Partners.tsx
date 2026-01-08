@@ -10,15 +10,15 @@ const Partners = () => {
       <h2 className="text-3xl text-center md:text-4xl max-w-xl mx-auto lg:text-5xl font-bold">
         Our Partners
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-4 items-center justify-center gap-5 py-1 mt-10 md:mt-20">
-        <div className="md:py-12 md:px-24 flex justify-center items-center bg-[#FFFCFC]">
+      <div className="grid mx-auto mb-10 max-w-6xl gap-y-10 grid-cols-2 md:grid-cols-4 items-center justify-center px-3 md:px-0 py-1 mt-10 md:mt-20">
+        <div className="md:py-16 transition-colors duration-500 hover:bg-[#FFF9EA] h-auto pr-3 md:pr-0 md:px-10 border-r-[#EAEAEA] border-r flex justify-center items-center bg-[#FFFCFC]">
           <Image
             src={sponsorImage}
             alt="Sponsor"
             className="w-[200px] h-20 object-cover"
           />
         </div>
-        <div className="md:py-12 md:px-24 flex justify-center items-center bg-[#FFFCFC]">
+        <div className="md:py-12 md:px-8 transition-colors duration-500 hover:bg-[#FFF9EA] md:border-r-[#EAEAEA] md:border-r flex justify-center items-center bg-[#FFFCFC]">
           <Image
             src={ebonyistateGovernment}
             alt="Sponsor"
@@ -26,7 +26,7 @@ const Partners = () => {
             className="w-[107px] h-[105px] object-cover"
           />
         </div>
-        <div className="md:py-12 md:px-24 flex justify-center items-center bg-[#FFFCFC]">
+        <div className="md:py-12 md:px-8 transition-colors duration-500 hover:bg-[#FFF9EA] border-r-[#EAEAEA] border-r flex justify-center items-center bg-[#FFFCFC]">
           <Image
             src={funai}
             alt="Sponsor"
@@ -34,7 +34,7 @@ const Partners = () => {
             className="w-[99px] h-[99px] object-cover"
           />
         </div>
-        <div className="md:py-12 md:px-24 flex justify-center items-center bg-[#FFFCFC]">
+        <div className="md:py-12 md:px-8 transition-colors duration-500 hover:bg-[#FFF9EA] flex justify-center items-center bg-[#FFFCFC]">
           <Image
             src={ebsu}
             alt="Sponsor"
