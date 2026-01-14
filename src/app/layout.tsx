@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Bricolage_Grotesque } from "next/font/google";
 import AppLayout from "@/component/layout/AppLayout";
-import { description, OG_Image, OG_Image_alt } from "@/lib/constants";
+import { description, OG_Image_alt } from "@/lib/constants";
+import { GoogleAnalytics } from "@next/third-parties/google";
 const bricolageGrotesque = Bricolage_Grotesque({
   variable: "--font-bricolage-grotesque",
   subsets: ["latin"],
@@ -60,6 +61,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={` ${bricolageGrotesque.className} antialiased`}>
         <AppLayout>{children}</AppLayout>
+        <GoogleAnalytics
+          gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || ""}
+        />
       </body>
     </html>
   );

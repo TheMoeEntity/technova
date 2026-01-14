@@ -40,9 +40,12 @@ const Hero = () => {
         </div>
       </motion.div>
       <div className="flex items-center gap-5 mt-14">
-        <a href="" className="px-6 py-2 bg-black text-white rounded-lg">
+        <Link
+          href="/speakers"
+          className="px-6 py-2 bg-black text-white rounded-lg"
+        >
           Register Now
-        </a>
+        </Link>
         {/* <a
           href=""
           className="px-6 py-2 bg-[#FFEFC1] border-[#FFC520] border text-black rounded-lg"
