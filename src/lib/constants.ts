@@ -89,7 +89,10 @@ export const teamMembers: TeamMember[] = [
     role: "Co-founder DTCSI Academy, Co-Convener Technova",
     image: emmanuelIkenna,
     category: "Core Team",
-    socials: { twitter: "#", linkedin: "#" },
+    socials: {
+      twitter: "https://x.com/c_potens",
+      linkedin: "https://linkedin.com/in/emmanuel-ikenna-1a1a48203",
+    },
   },
   {
     id: "2",
