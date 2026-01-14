@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Linkedin,
@@ -10,6 +10,7 @@ import {
   Globe,
   TwitterIcon,
   X,
+  Loader2,
 } from "lucide-react";
 import DOMPurify from "isomorphic-dompurify";
 import { FaBehance } from "react-icons/fa";
@@ -45,11 +46,55 @@ export default function TeamSection() {
   const [selectedMember, setSelectedMember] = useState<
     (typeof teamMembers)[0] | null
   >(null);
+  const [visibleCount, setVisibleCount] = useState<number>(10);
+  const [isLoading, setIsLoading] = useState(false);
+  const loadMoreRef = useRef<HTMLDivElement>(null);
+
   const sanitizedHTML = (content: string) => DOMPurify.sanitize(content);
+
   const filteredMembers =
     activeCategory === "All"
       ? teamMembers
       : teamMembers.filter((member) => member.category === activeCategory);
+
+  const displayedMembers = filteredMembers.slice(0, visibleCount);
+
+  // Reset visible count when category changes - handled in onClick now to avoid effect warning
+  // useEffect removed
+
+  // Infinite scroll observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (
+          entries[0].isIntersecting &&
+          !isLoading &&
+          visibleCount < filteredMembers.length
+        ) {
+          setIsLoading(true);
+          setTimeout(() => {
+            // Use functional update to ensure we have latest
+            setVisibleCount((prev) =>
+              Math.min(prev + 10, filteredMembers.length)
+            );
+            setIsLoading(false);
+          }, 750);
+        }
+      },
+      { threshold: 0.1, rootMargin: "100px" }
+    );
+
+    const currentRef = loadMoreRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [filteredMembers.length, isLoading, visibleCount]);
 
   return (
     <div className="w-full bg-white pb-16 pt-5">
@@ -60,7 +105,10 @@ export default function TeamSection() {
             {categories.map((category) => (
               <motion.button
                 key={category}
-                onClick={() => setActiveCategory(category)}
+                onClick={() => {
+                  setActiveCategory(category);
+                  setVisibleCount(10);
+                }}
                 className={`px-6 py-2 rounded-full font-medium whitespace-nowrap transition-colors ${
                   activeCategory === category
                     ? "bg-black text-white"
@@ -78,7 +126,7 @@ export default function TeamSection() {
         {/* Team Members Grid */}
         <div className="space-y-8 md:px-24">
           <AnimatePresence mode="wait">
-            {filteredMembers.map((member, index) => (
+            {displayedMembers.map((member, index) => (
               <motion.div
                 key={member.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -139,6 +187,14 @@ export default function TeamSection() {
               </motion.div>
             ))}
           </AnimatePresence>
+          {visibleCount < filteredMembers.length && (
+            <div
+              ref={loadMoreRef}
+              className="h-20 w-full flex justify-center items-center py-4"
+            >
+              {isLoading && <Loader2 className="animate-spin text-black" />}
+            </div>
+          )}
         </div>
       </div>
 

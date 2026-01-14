@@ -86,7 +86,7 @@ export const teamMembers: TeamMember[] = [
   {
     id: "21",
     name: "Ikenna Ojimba",
-    role: "Co-founder DTCSI Academy, Co-Convener Technova",
+    role: "Co-Convener Technova",
     image: emmanuelIkenna,
     category: "Core Team",
     socials: {
