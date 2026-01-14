@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
 import { useScrollTo } from "@/hooks/useScrollTo";
+import { Data } from "@/lib/constants";
 
 interface FAQItem {
   id: string;
@@ -14,39 +15,47 @@ interface FAQItem {
 const faqData: FAQItem[] = [
   {
     id: "1",
-    question: "What is Technova?",
-    answer:
-      "TechNova Africa's Web3 Carnival is a groundbreaking event bringing together Web3 enthusiasts, blockchain developers, innovators, and industry leaders in Ebonyi State, Nigeria. It's a celebration of decentralized technology with workshops, networking, and carnival festivities.",
+    question: "Is Technova a Web3 or crypto event?",
+    answer: `Technova is not a Web3-only event. Web3 is explored as one of several opportunity layers alongside technology, finance, law, media, and community. The summit is designed to be accessible, whether you are new to these topics or already building in the space.
+`,
   },
   {
     id: "2",
-    question: "Do I need prior knowledge of Web3 to attend?",
+    question: "Who should attend Technova Summit?",
     answer:
-      "No prior knowledge is required! Technova welcomes everyone from beginners to experts. We offer beginner-friendly sessions and workshops designed to help newcomers learn the fundamentals of Web3 and blockchain technology.",
+      "Technova is open to developers, designers, creators, entrepreneurs, investors, policymakers, university students, NYSC members, early career professionals,and anyone interested in technology, innovation, and opportunity.",
   },
   {
     id: "3",
-    question: "How do I register for the event?",
+    question: "Where will Technova Summit take place?",
     answer:
-      "You can register through our official website at technova.com/register. Simply fill out the registration form with your details, and you'll receive a confirmation email with all event information and updates.",
+      "Technova Summit will take place at the " +
+      Data.Location +
+      ", Ebonyi State, Nigeria.",
   },
   {
     id: "4",
-    question: "Is there a registration fee?",
+    question: " Are there opportunities for networking and collaboration?",
     answer:
-      "There's no registration fee for Technova. It's completely free and open to anyone eager to be part of Africa's growing innovation ecosystem.",
+      "Yes. Networking is a core part of Technova. The summit is designed to connect attendees with speakers, partners, exhibitors, and fellow participants across different industries and ecosystems.",
   },
   {
     id: "5",
-    question: "What can I expect at the carnival?",
+    question: "Is Technova only for people in Ebonyi State?",
     answer:
-      "Expect three days packed with keynote speeches, hands-on workshops, networking sessions, product demonstrations, pitch competitions, and exciting carnival entertainment featuring music, food, and cultural performances.",
+      "No. While Technova proudly launches from Ebonyi State, it is open to participants from across Nigeria and beyond. The summit is built to scale nationally and connect with global ecosystems.",
   },
   {
     id: "6",
-    question: "Will there be accommodation assistance?",
+    question: "How can I get involved as a speaker, partner, or sponsor?",
     answer:
-      "Yes! We're partnering with local hotels to provide discounted accommodation rates for attendees. Details and booking information will be sent to registered participants.",
+      "Interested speakers, partners, and sponsors can reach out through the contact form on our website or via our official social media channels. Our team will respond with the relevant information.",
+  },
+  {
+    id: "7",
+    question: "How do I stay updated?",
+    answer:
+      "Follow Technova Summit on our official social media platforms and subscribe to updates on the website for announcements, speaker reveals, and ticket information.",
   },
 ];
 
@@ -85,7 +94,7 @@ export default function FAQSection() {
                       {item.question}
                     </h3>
                     <motion.div
-                      className="ml-4 flex-shrink-0"
+                      className="ml-4 shrink-0"
                       animate={{ rotate: expandedId === item.id ? 0 : 0 }}
                       transition={{ duration: 0.2 }}
                     >

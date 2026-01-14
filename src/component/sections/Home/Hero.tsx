@@ -1,15 +1,18 @@
 "use client";
-import { Calendar, MapPin, X } from "lucide-react";
+import { Calendar, ChevronDown, MapPin, X } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 import artifact from "@/assets/images/artifact-1.svg";
 import artifact2 from "@/assets/images/artifact-2.svg";
 import artifact3 from "@/assets/images/artifact-3.svg";
-import { motion } from "framer-motion";
-import { Data } from "@/lib/constants";
+import { AnimatePresence, motion } from "framer-motion";
+import { Data, getInvolvedLinks } from "@/lib/constants";
+import Link from "next/link";
 
 const Hero = () => {
   const [showMap, setShowMap] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
   return (
     <section className="bg-[#FFF9EA] flex-col h-[888px] lg:h-[680px] xl:h-[1000px] overflow-y-hidden w-full flex items-center py-28">
       <motion.div
@@ -40,12 +43,55 @@ const Hero = () => {
         <a href="" className="px-6 py-2 bg-black text-white rounded-lg">
           Register Now
         </a>
-        <a
+        {/* <a
           href=""
           className="px-6 py-2 bg-[#FFEFC1] border-[#FFC520] border text-black rounded-lg"
         >
           Become a Partner
-        </a>
+        </a> */}
+        {/* Desktop Dropdown */}
+        <div
+          className="relative block"
+          onMouseEnter={() => setIsDropdownOpen(true)}
+          onMouseLeave={() => setIsDropdownOpen(false)}
+        >
+          <button
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            className="flex items-center gap-2 rounded-xl text-black px-5 py-2 transition-colors"
+          >
+            Get Involved
+            <ChevronDown
+              size={16}
+              className={`transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""}`}
+            />
+          </button>
+
+          <AnimatePresence>
+            {isDropdownOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                transition={{ duration: 0.2 }}
+                className="absolute z-50 top-full right-0 mt-2 w-56 bg-[#FFF9EA] rounded-xl shadow-lg overflow-hidden border border-gray-100"
+              >
+                {getInvolvedLinks.map((link, index) => (
+                  <div key={index}>
+                    <Link
+                      href={link.href}
+                      className="block px-4 py-2 text-sm hover:bg-[#FFEFC1] transition-colors text-black"
+                    >
+                      {link.label}
+                    </Link>
+                    {index < getInvolvedLinks.length - 1 && (
+                      <div className="h-1px bg-black/10 mx-4 my-1" />
+                    )}
+                  </div>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
       <div className="mt-[100px] h-full relative grid grid-cols-3 md:px-28 xl:px-0 w-full max-w-4xl mx-auto">
         {/* Left Artifact */}
