@@ -24,7 +24,7 @@ export default function Home() {
       </div> */}
       <Attendees />
       <WhoShouldAttend />
-      <WhySponsor />
+      {/* <WhySponsor /> */}
       {/* <Agenda /> */}
       <FAQSection />
     </div>
