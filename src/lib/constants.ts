@@ -15,7 +15,7 @@ import joshuaNwankwo from "@/assets/images/joshua-nwankwo.svg";
 import kamso from "@/assets/images/kamso.svg";
 import moses from "@/assets/images/moses-nwigberi-profile.jpeg";
 import blaise from "@/assets/images/blaise.svg";
-import emmanuelIkenna from "@/assets/images/emmanuel ikenna.svg";
+import emmanuelIkenna from "@/assets/images/ikenna-ojimba.svg";
 import okeke from "@/assets/images/okeke-kelechi.jpeg";
 import amara2 from "@/assets/images/amara.jpeg";
 
@@ -84,6 +84,14 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
+    id: "21",
+    name: "Ikenna Ojimba",
+    role: "Co-founder DTCSI Academy, Co-Convener Technova",
+    image: emmanuelIkenna,
+    category: "Core Team",
+    socials: { twitter: "#", linkedin: "#" },
+  },
+  {
     id: "2",
     name: "Toochukwu Okoro",
     role: "Founder and CEO, Azza. <br /> Cofounder, TECHNOVA",
@@ -96,14 +104,6 @@ export const teamMembers: TeamMember[] = [
     name: "ENGR. Chuks Okoronkwo",
     role: "Programs Manager, TECHNOVA",
     image: chuksOkonkwo,
-    category: "Partnership",
-    socials: { twitter: "#", linkedin: "#" },
-  },
-  {
-    id: "21",
-    name: "Emmanuel Ikenna",
-    role: "Co-founder DTCSI Academy",
-    image: emmanuelIkenna,
     category: "Partnership",
     socials: { twitter: "#", linkedin: "#" },
   },
