@@ -88,7 +88,7 @@ const Header = () => {
         </div>
 
         <Link
-          href="/tickets"
+          href="#"
           className="hidden lg:block bg-[#000000] rounded-xl text-white px-5 py-2 hover:bg-black/80 transition-colors"
         >
           Get Tickets
@@ -170,7 +170,7 @@ const Header = () => {
             </div>
 
             <Link
-              href="/tickets"
+              href="#"
               className="bg-[#000000] rounded-xl text-white px-8 py-3 hover:bg-black/80 transition-colors text-lg font-medium mt-4"
               onClick={() => setIsOpen(false)}
             >

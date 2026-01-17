@@ -54,7 +54,7 @@ export const getInvolvedLinks = [
     label: "Generate DP",
   },
   {
-    href: "/#",
+    href: "https://forms.gle/9iwGXUPKM3RJt7dCA",
     label: "Become a Sponsor",
   },
   {
@@ -62,7 +62,7 @@ export const getInvolvedLinks = [
     label: "Become a Speaker",
   },
   {
-    href: "/#",
+    href: "https://forms.gle/eajUDRfwpLmf27dr5",
     label: "Become a Volunteer",
   },
   {
