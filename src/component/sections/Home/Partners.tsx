@@ -11,7 +11,7 @@ const Partners = () => {
       <h2 className="text-3xl text-center md:text-4xl max-w-xl mx-auto lg:text-5xl font-bold">
         Our Partners
       </h2>
-      <div className="grid mx-auto mb-10 max-w-6xl gap-y-10 grid-cols-2 md:grid-cols-3 xl:md:grid-cols-5 items-center justify-center px-3 md:px-0 py-1 mt-10 md:mt-20">
+      <div className="grid mx-auto mb-10 max-w-6xl gap-y-10 grid-cols-2 md:grid-cols-3 xl:md:grid-cols-5 items-center place-items-center justify-center px-3 md:px-0 py-1 mt-10 md:mt-20">
         <div className="md:py-16 transition-colors duration-500 hover:bg-[#FFF9EA] h-auto pr-3 md:pr-0  border-r-[#EAEAEA] border-r flex justify-center items-center bg-[#FFFCFC]">
           <Image
             src={sponsorImage}

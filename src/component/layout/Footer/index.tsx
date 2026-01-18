@@ -25,12 +25,12 @@ export default function Footer() {
           />
 
           <div className="grid grid-cols-1 justify-start items-start md:grid-cols-2 gap-x-20 xl:gap-x-40 gap-y-1 text-lg text-white">
-            <button
+            {/* <button
               className="text-left"
               onClick={createHandler("scrollToSchedule")}
             >
               Schedule
-            </button>
+            </button> */}
             <button
               className="text-left"
               onClick={createHandler("scrollToFAQ")}

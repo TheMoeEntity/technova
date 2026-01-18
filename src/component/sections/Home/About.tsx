@@ -21,7 +21,7 @@ const About = () => {
       <h2 className="text-3xl text-center md:text-4xl max-w-xl mx-auto lg:text-5xl font-bold">
         About Technova
       </h2>
-      <div className="text-center max-w-3xl mx-auto  relative grid grid-cols-2 gap-8 lg:block">
+      <div className="text-center max-w-5xl mx-auto  relative grid grid-cols-2 gap-8 lg:block">
         <div className="col-span-2 p-4 lg:p-0 lg:w-full">
           <p className="block w-full text-base lg:text-lg leading-relaxed text-gray-600">
             More than a conference, Technova is a multi-day experience designed
