@@ -23,7 +23,7 @@ const About = () => {
       </h2>
       <div className="text-center max-w-5xl mx-auto  relative grid grid-cols-2 gap-8 lg:block">
         <div className="col-span-2 p-4 lg:p-0 lg:w-full">
-          <p className="block w-full text-base lg:text-lg leading-relaxed text-gray-600">
+          <p className="px-3 text-left md:text-center md:px-0 block w-full text-base lg:text-lg leading-relaxed text-gray-600">
             More than a conference, Technova is a multi-day experience designed
             to educate, inspire, and unlock real opportunities for the next
             generation of African talent. Born in Ebonyi State and built with a
