@@ -113,7 +113,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "16",
-    name: "Okeke Kelechi Daniel",
+    name: "Kelechi Daniel",
     role: "Design Lead",
     image: okeke,
     category: "Design",
@@ -188,6 +188,18 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
+    id: "10",
+    name: "Nenye Kingsley",
+    role: "Content team",
+    image: nenyeKingsley,
+    category: "Media",
+    socials: {
+      twitter: "https://x.com/NenyeKingsley?t=yPhzvPuI4AlMyBkdYhgyBg&s=09",
+      linkedin:
+        "https://www.linkedin.com/in/vexahlia-kingsley-409315244?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    },
+  },
+  {
     id: "17",
     name: "Amhara",
     role: "Marketing, TECHNOVA",
@@ -253,18 +265,6 @@ export const teamMembers: TeamMember[] = [
     socials: {
       instagram: "https://www.instagram.com/dansparkcfr?igsh=NjBqZWI2ZjhwMGtu",
       twitter: " https://x.com/danspark_gmi?t=jzhDbXi23pVNZ3ZLHHQUeA&s=09",
-    },
-  },
-  {
-    id: "10",
-    name: "Nenye Kingsley",
-    role: "Contributor",
-    image: nenyeKingsley,
-    category: "Media",
-    socials: {
-      twitter: "https://x.com/NenyeKingsley?t=yPhzvPuI4AlMyBkdYhgyBg&s=09",
-      linkedin:
-        "https://www.linkedin.com/in/vexahlia-kingsley-409315244?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     },
   },
   {
