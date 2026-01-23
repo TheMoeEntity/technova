@@ -11,13 +11,14 @@ import jamesEmmanuella from "@/assets/images/james-emmanuella.svg";
 import nenyeKingsley from "@/assets/images/nenye-kingsley.svg";
 import odinmaMmesoma from "@/assets/images/odinma-mmesoma.svg";
 import victorIkem from "@/assets/images/victor-ikem.svg";
-import joshuaNwankwo from "@/assets/images/joshua-nwankwo.svg";
+// import joshuaNwankwo from "@/assets/images/joshua-nwankwo.svg";
 import kamso from "@/assets/images/kamso.svg";
 import moses from "@/assets/images/moses-nwigberi-profile.jpeg";
 import blaise from "@/assets/images/blaise.svg";
 import emmanuelIkenna from "@/assets/images/ikenna-ojimba.svg";
-import okeke from "@/assets/images/okeke-kelechi.jpeg";
+import okeke from "@/assets/images/Okeke-kelechi.jpg";
 import amara2 from "@/assets/images/amara.jpeg";
+import nnannaPrincewill from "@/assets/images/nnanna_princewill.jpg";
 
 export enum Data {
   Location = "The Ecumenical Centre, Abakaliki",
@@ -111,105 +112,25 @@ export const teamMembers: TeamMember[] = [
     socials: { twitter: "#", linkedin: "#" },
   },
   {
-    id: "4",
-    name: "Zebulun",
-    role: "Creative director TECHNOVA",
-    image: zebulun,
+    id: "16",
+    name: "Okeke Kelechi Daniel",
+    role: "Design Lead",
+    image: okeke,
     category: "Design",
-    socials: { twitter: "#", linkedin: "#" },
-  },
-  {
-    id: "5",
-    name: "Udu Uduma Samuel",
-    role: "Partnerships and Collaborations",
-    image: uduUdumaSamuel,
-    category: "Partnership",
-    socials: { twitter: "#", linkedin: "#" },
+    socials: {
+      twitter: "https://x.com/novaprayerr",
+      instagram: "https://www.instagram.com/novaprayer/",
+    },
   },
   {
     id: "6",
     name: "James Emmanuella",
-    role: "Lead Designer, TECHNOVA",
+    role: "Designer",
     image: jamesEmmanuella,
     category: "Design",
     socials: {
       twitter: "https://x.com/the_ellajames",
       website: "https://ellajames.framer.website/",
-    },
-  },
-  {
-    id: "22",
-    name: "Moses Nwigberi",
-    role: "Web Developer, TECHNOVA",
-    image: moses,
-    category: "Engineering",
-    socials: {
-      website: "https://mosesnwigberi.com",
-      linkedin: "https://linkedin.com/in/nwigber-moses",
-    },
-  },
-  {
-    id: "7",
-    name: "Joshua Nwankwo",
-    role: "Founder letsdap, Ticketing provider TECHNOVA",
-    image: joshuaNwankwo,
-    category: "Engineering",
-    socials: { twitter: "#", linkedin: "#" },
-  },
-  {
-    id: "8",
-    name: "Danny Amara",
-    role: "SMM & Content, TECHNOVA",
-    image: dannyAmara,
-    category: "Marketing",
-    socials: {
-      twitter: "https://x.com/apostleofdesign",
-      youtube: "https://youtube.com/@apostleofdesign",
-    },
-  },
-  {
-    id: "17",
-    name: "Amhara",
-    role: "Marketing, TECHNOVA",
-    image: amara2,
-    category: "Marketing",
-    socials: {
-      twitter: "https://x.com/theamahra?s=21&t=0diAYlYXq9Ef7HsvoAJLrg",
-    },
-  },
-  {
-    id: "9",
-    name: "Opoke Daniel",
-    role: "Operational Manager, TECHNOVA",
-    image: opokeDaniel,
-    category: "Partnership",
-    socials: {
-      instagram: "https://www.instagram.com/dansparkcfr?igsh=NjBqZWI2ZjhwMGtu",
-      twitter: " https://x.com/danspark_gmi?t=jzhDbXi23pVNZ3ZLHHQUeA&s=09",
-    },
-  },
-  {
-    id: "10",
-    name: "Nenye Kingsley",
-    role: "Content team",
-    image: nenyeKingsley,
-    category: "Media",
-    socials: {
-      twitter: "https://x.com/NenyeKingsley?t=yPhzvPuI4AlMyBkdYhgyBg&s=09",
-      linkedin:
-        "https://www.linkedin.com/in/vexahlia-kingsley-409315244?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-    },
-  },
-  {
-    id: "11",
-    name: "Victor Ikem",
-    role: "Visual Storyteller/ Media strategist",
-    image: victorIkem,
-    category: "Media",
-    socials: {
-      facebook: "https://www.facebook.com/share/1G21c8cYDF/",
-      instagram:
-        "#https://www.instagram.com/victorikem_?igsh=MWsxOWl4aTB4NWdzNQ==",
     },
   },
   {
@@ -224,9 +145,31 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
+    id: "15",
+    name: "Mbachu Blaise",
+    role: "Designer",
+    image: blaise,
+    category: "Design",
+    socials: {
+      behance: "https://www.behance.net/blaisedits",
+      instagram: "https://instagram.com/blaise_edits?igshid=MzRlODBiNWFlZA==",
+    },
+  },
+  {
+    id: "22",
+    name: "Moses Nwigberi",
+    role: "Developer, TECHNOVA",
+    image: moses,
+    category: "Engineering",
+    socials: {
+      website: "https://mosesnwigberi.com",
+      linkedin: "https://linkedin.com/in/nwigber-moses",
+    },
+  },
+  {
     id: "13",
     name: "Elizabeth Igbinedion",
-    role: "Content team",
+    role: "Content Lead",
     image: elizabethIgbinedion,
     category: "Media",
     socials: {
@@ -245,25 +188,95 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
-    id: "15",
-    name: "Mbachu Blaise",
-    role: "Designer",
-    image: blaise,
-    category: "Design",
+    id: "17",
+    name: "Amhara",
+    role: "Marketing, TECHNOVA",
+    image: amara2,
+    category: "Marketing",
     socials: {
-      behance: "https://www.behance.net/blaisedits",
-      instagram: "https://instagram.com/blaise_edits?igshid=MzRlODBiNWFlZA==",
+      twitter: "https://x.com/theamahra?s=21&t=0diAYlYXq9Ef7HsvoAJLrg",
     },
   },
   {
-    id: "16",
-    name: "Okeke Kelechi Daniel",
-    role: "Designer",
-    image: okeke,
-    category: "Design",
+    id: "27",
+    name: "Nnanna Princewill",
+    role: "Videographer",
+    image: nnannaPrincewill,
+    category: "Media",
     socials: {
-      twitter: "https://x.com/novaprayerr",
-      instagram: "https://www.instagram.com/novaprayer/",
+      // twitter: "https://x.com/nnanna_princewill",
+      instagram:
+        "https://www.instagram.com/nnanna_prince_?igsh=Z3I1Y3Zld2tnbzZs",
+    },
+  },
+  {
+    id: "8",
+    name: "Danny Amara",
+    role: "Contributor",
+    image: dannyAmara,
+    category: "Media",
+    socials: {
+      twitter: "https://x.com/apostleofdesign",
+      youtube: "https://youtube.com/@apostleofdesign",
+    },
+  },
+  {
+    id: "4",
+    name: "Zebulun",
+    role: "Contributor",
+    image: zebulun,
+    category: "Media",
+    socials: { twitter: "#", linkedin: "#" },
+  },
+  {
+    id: "5",
+    name: "Udu Uduma Samuel",
+    role: "Contributor",
+    image: uduUdumaSamuel,
+    category: "Partnership",
+    socials: { twitter: "#", linkedin: "#" },
+  },
+  // {
+  //   id: "7",
+  //   name: "Joshua Nwankwo",
+  //   role: "Founder letsdap, Ticketing provider TECHNOVA",
+  //   image: joshuaNwankwo,
+  //   category: "Engineering",
+  //   socials: { twitter: "#", linkedin: "#" },
+  // },
+  {
+    id: "9",
+    name: "Opoke Daniel",
+    role: "Contributor",
+    image: opokeDaniel,
+    category: "Partnership",
+    socials: {
+      instagram: "https://www.instagram.com/dansparkcfr?igsh=NjBqZWI2ZjhwMGtu",
+      twitter: " https://x.com/danspark_gmi?t=jzhDbXi23pVNZ3ZLHHQUeA&s=09",
+    },
+  },
+  {
+    id: "10",
+    name: "Nenye Kingsley",
+    role: "Contributor",
+    image: nenyeKingsley,
+    category: "Media",
+    socials: {
+      twitter: "https://x.com/NenyeKingsley?t=yPhzvPuI4AlMyBkdYhgyBg&s=09",
+      linkedin:
+        "https://www.linkedin.com/in/vexahlia-kingsley-409315244?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    },
+  },
+  {
+    id: "11",
+    name: "Victor Ikem",
+    role: "Contributor",
+    image: victorIkem,
+    category: "Media",
+    socials: {
+      facebook: "https://www.facebook.com/share/1G21c8cYDF/",
+      instagram:
+        "#https://www.instagram.com/victorikem_?igsh=MWsxOWl4aTB4NWdzNQ==",
     },
   },
 ];
