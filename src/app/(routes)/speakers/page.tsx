@@ -4,7 +4,7 @@ const Speakers = () => {
   return (
     <div className="flex flex-col md:min-h-screen pb-16 md:pb-0 bg-white font-bricolage-grotesque">
       <div className="flex flex-col items-center gap-6 justify-center pt-32 px-4 md:px-8">
-        <ComingSoon />
+        <ComingSoon message="Speakers to be revealed soon" />
       </div>
     </div>
   );

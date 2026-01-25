@@ -7,7 +7,7 @@ import artifact2 from "@/assets/images/artifact-2.svg";
 import artifact3 from "@/assets/images/artifact-3.svg";
 import { motion } from "framer-motion";
 
-const ComingSoon = () => {
+const ComingSoon: React.FC<{ message?: string }> = ({ message }) => {
   return (
     <section className="flex-col md:h-[870px] lg:h-[680px] xl:h-[690px] overflow-y-hidden w-full flex items-center pt-5">
       <div className="">
@@ -15,7 +15,7 @@ const ComingSoon = () => {
           Coming Soon!
         </h1>
         <p className="text-lg text-center mt-7">
-          We are working on this, please check back later!
+          {message || "We are working on this, please check back later!"}
         </p>
       </div>
       <div className="hidden mt-[70px] h-full relative md:grid grid-cols-3 md:px-28 xl:px-0 w-full max-w-4xl mx-auto">
