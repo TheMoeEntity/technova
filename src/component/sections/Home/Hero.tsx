@@ -40,12 +40,14 @@ const Hero = () => {
         </div>
       </motion.div>
       <div className="flex items-center gap-5 mt-14">
-        <Link
-          href="/speakers"
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://luma.com/xka6fx9o"
           className="px-6 py-2 bg-black text-white rounded-lg"
         >
           Register Now
-        </Link>
+        </a>
         {/* <a
           href=""
           className="px-6 py-2 bg-[#FFEFC1] border-[#FFC520] border text-black rounded-lg"
