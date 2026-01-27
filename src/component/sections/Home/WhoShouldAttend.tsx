@@ -72,7 +72,7 @@ export function WhoShouldAttend() {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
   return (
-    <section className="bg-[#FAFAFA] w-full">
+    <section className="bg-[#FAFAFA] px-5 lg:px-0 w-full">
       <div className="max-w-5xl mx-auto py-8 xl:pb-28 xl:pt-16">
         <h2 className="text-center text-4xl mb-10 md:mb-16 max-w-xl mx-auto lg:text-5xl font-bold">
           Who Should Attend
