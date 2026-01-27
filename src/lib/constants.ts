@@ -24,6 +24,8 @@ export enum Data {
   Location = "The Ecumenical Centre, Abakaliki",
   Mail = "thetechnovasummit@gmail.com",
   BASEURL = "https://technovasummit.com",
+  RegisterLink = "https://luma.com/xka6fx9o",
+  CountdownDate = "2026-03-12T00:00:00",
 }
 export enum SOCIALS {
   X = "https://x.com/TechNovasummit",

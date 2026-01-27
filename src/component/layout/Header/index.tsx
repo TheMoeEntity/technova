@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import technovalogo from "@/assets/images/technova-logo.svg";
-import { links, getInvolvedLinks } from "@/lib/constants";
+import { links, getInvolvedLinks, Data } from "@/lib/constants";
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -88,7 +88,7 @@ const Header = () => {
         </div>
 
         <Link
-          href="#"
+          href={Data.RegisterLink}
           className="hidden lg:block bg-[#000000] rounded-xl text-white px-5 py-2 hover:bg-black/80 transition-colors"
         >
           Get Tickets
@@ -170,7 +170,7 @@ const Header = () => {
             </div>
 
             <Link
-              href="#"
+              href={Data.RegisterLink}
               className="bg-[#000000] rounded-xl text-white px-8 py-3 hover:bg-black/80 transition-colors text-lg font-medium mt-4"
               onClick={() => setIsOpen(false)}
             >

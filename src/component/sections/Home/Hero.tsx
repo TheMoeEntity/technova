@@ -9,12 +9,14 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Data, getInvolvedLinks } from "@/lib/constants";
 import Link from "next/link";
 
+import Countdown from "@/component/ui/Countdown";
+
 const Hero = () => {
   const [showMap, setShowMap] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   // const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
   return (
-    <section className="bg-[#FFF9EA] flex-col h-[888px] lg:h-[680px] xl:h-[1012px] overflow-y-hidden w-full flex items-center py-28">
+    <section className="bg-[#FFF9EA] flex-col h-[1008px] md:h-[980px] lg:h-[680px] xl:h-[1150px] overflow-y-hidden w-full flex items-center py-28">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -38,12 +40,15 @@ const Hero = () => {
             <span>{Data.Location}</span>
           </div>
         </div>
+
+        <Countdown />
       </motion.div>
-      <div className="flex items-center gap-5 mt-14">
+
+      <div className="flex items-center gap-5 mt-10">
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://luma.com/xka6fx9o"
+          href={Data.RegisterLink}
           className="px-6 py-2 bg-black text-white rounded-lg"
         >
           Register Now

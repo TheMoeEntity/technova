@@ -26,16 +26,16 @@ const About = () => {
           <p className="px-3 text-left md:text-center md:px-0 block w-full text-base lg:text-lg leading-relaxed text-gray-600">
             More than a conference, Technova is a multi-day experience designed
             to educate, inspire, and unlock real opportunities for the next
-            generation of African talent. Born in Ebonyi State and built with a
-            continental vision, Technova Summit brings together students,
-            professionals, creators, founders, institutions, and global
-            ecosystem players to explore the technologies, ideas, and skills
-            shaping the future of work and innovation in Africa. Across
-            immersive experiences including trade fairs, exhibitions, bootcamps,
-            cultural showcases, and a flagship conference, Technova creates an
-            accessible entry point into today’s most important innovation
-            conversations, meeting people where they are and guiding them toward
-            what’s next.
+            generation of African talent. Born in South east Nigeria and rising
+            from Ebonyi State and built with a continental vision, Technova
+            Summit brings together students, professionals, creators, founders,
+            institutions, and global ecosystem players to explore the
+            technologies, ideas, and skills shaping the future of work and
+            innovation in Africa. Across immersive experiences including trade
+            fairs, exhibitions, bootcamps, cultural showcases, and a flagship
+            conference, Technova creates an accessible entry point into today’s
+            most important innovation conversations, meeting people where they
+            are and guiding them toward what’s next.
           </p>
         </div>
 
