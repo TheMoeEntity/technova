@@ -2,65 +2,22 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Linkedin,
-  Instagram,
-  Facebook,
-  Youtube,
-  Globe,
-  TwitterIcon,
-  X,
-  Loader2,
-} from "lucide-react";
+import { X, Loader2 } from "lucide-react";
 import DOMPurify from "isomorphic-dompurify";
-import { FaBehance } from "react-icons/fa";
-import { PiTiktokLogoBold } from "react-icons/pi";
 import Image from "next/image";
-import { categories, teamMembers } from "@/lib/constants";
+import { speakers } from "@/lib/constants";
+import { TeamMember } from "@/types";
+import { getSocialIcon } from "../Team/TeamSection";
 
-export const getSocialIcon = (platform: string) => {
-  switch (platform) {
-    case "twitter":
-      return <TwitterIcon size={20} />;
-    case "linkedin":
-      return <Linkedin size={20} />;
-    case "instagram":
-      return <Instagram size={20} />;
-    case "facebook":
-      return <Facebook size={20} />;
-    case "youtube":
-      return <Youtube size={20} />;
-    case "tiktok":
-      return <PiTiktokLogoBold size={20} />;
-    case "behance":
-      return <FaBehance size={20} />;
-    case "website":
-      return <Globe size={20} />;
-    default:
-      return <Globe size={20} />;
-  }
-};
-
-export default function TeamSection() {
-  const [activeCategory, setActiveCategory] = useState("All");
-  const [selectedMember, setSelectedMember] = useState<
-    (typeof teamMembers)[0] | null
-  >(null);
+export default function SpeakersSection() {
+  const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
   const [visibleCount, setVisibleCount] = useState<number>(10);
   const [isLoading, setIsLoading] = useState(false);
   const loadMoreRef = useRef<HTMLDivElement>(null);
 
   const sanitizedHTML = (content: string) => DOMPurify.sanitize(content);
 
-  const filteredMembers =
-    activeCategory === "All"
-      ? teamMembers
-      : teamMembers.filter((member) => member.category === activeCategory);
-
-  const displayedMembers = filteredMembers.slice(0, visibleCount);
-
-  // Reset visible count when category changes - handled in onClick now to avoid effect warning
-  // useEffect removed
+  const displayedMembers = speakers.slice(0, visibleCount);
 
   // Infinite scroll observer
   useEffect(() => {
@@ -69,14 +26,12 @@ export default function TeamSection() {
         if (
           entries[0].isIntersecting &&
           !isLoading &&
-          visibleCount < filteredMembers.length
+          visibleCount < speakers.length
         ) {
           setIsLoading(true);
           setTimeout(() => {
             // Use functional update to ensure we have latest
-            setVisibleCount((prev) =>
-              Math.min(prev + 10, filteredMembers.length),
-            );
+            setVisibleCount((prev) => Math.min(prev + 10, speakers.length));
             setIsLoading(false);
           }, 750);
         }
@@ -94,36 +49,12 @@ export default function TeamSection() {
         observer.unobserve(currentRef);
       }
     };
-  }, [filteredMembers.length, isLoading, visibleCount]);
+  }, [isLoading, visibleCount]);
 
   return (
     <div className="w-full bg-white pb-16 pt-5">
       <div className="max-w-6xl mx-auto">
-        <div className="mb-12">
-          {/* Category Filter Tabs */}
-          <div className="flex gap-4 py-2 flex-wrap pb-4 w-full justify-center">
-            {categories.map((category) => (
-              <motion.button
-                key={category}
-                onClick={() => {
-                  setActiveCategory(category);
-                  setVisibleCount(10);
-                }}
-                className={`px-6 py-2 rounded-full font-medium whitespace-nowrap transition-colors ${
-                  activeCategory === category
-                    ? "bg-black text-white"
-                    : "bg-transparent text-black border border-gray-300 hover:border-gray-400"
-                }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {category}
-              </motion.button>
-            ))}
-          </div>
-        </div>
-
-        {/* Team Members Grid */}
+        {/* Speakers Grid */}
         <div className="space-y-8 md:px-24">
           <AnimatePresence mode="wait">
             {displayedMembers.map((member, index) => (
@@ -157,6 +88,7 @@ export default function TeamSection() {
                   <h3 className="text-xl md:text-2xl font-bold text-black mb-1">
                     {member.name}
                   </h3>
+                  <h4 className="text-black mb-1">{member.email}</h4>
                   <p
                     className="text-gray-600"
                     dangerouslySetInnerHTML={{
@@ -164,7 +96,6 @@ export default function TeamSection() {
                     }}
                   />
                 </div>
-
                 {/* Social Links */}
                 <div className="flex gap-4 flex-col md:flex-row shrink-0">
                   {Object.entries(member.socials).map(([platform, url]) => {
@@ -187,7 +118,7 @@ export default function TeamSection() {
               </motion.div>
             ))}
           </AnimatePresence>
-          {visibleCount < filteredMembers.length && (
+          {visibleCount < speakers.length && (
             <div
               ref={loadMoreRef}
               className="h-20 w-full flex justify-center items-center py-4"
@@ -223,7 +154,7 @@ export default function TeamSection() {
               </button>
               <motion.div
                 layoutId={`image-${selectedMember.id}`}
-                className="relative h-[75vh] w-full"
+                className="relative h-[50vh] w-full"
               >
                 <Image
                   src={selectedMember.image || "/placeholder.svg"}
@@ -238,6 +169,11 @@ export default function TeamSection() {
                   {selectedMember.name}
                 </h3>
                 <p className="text-gray-600 mb-4">{selectedMember.role}</p>
+                {selectedMember.bio && (
+                  <p className="text-gray-700 text-sm mb-6 leading-relaxed">
+                    {selectedMember.bio}
+                  </p>
+                )}
                 <div className="flex gap-4">
                   {Object.entries(selectedMember.socials).map(
                     ([platform, url]) => {

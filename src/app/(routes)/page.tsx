@@ -1,12 +1,9 @@
 import Hero from "@/component/sections/Home/Hero";
 import About from "@/component/sections/Home/About";
-// import Banner from "@/component/ui/Banner";
 import Attendees from "@/component/sections/Home/Attendees";
-// import Agenda from "@/component/sections/Home/Agenda";
 import FAQSection from "@/component/sections/Home/FAQ";
 import Partners from "@/component/sections/Home/Partners";
 import { WhoShouldAttend } from "@/component/sections/Home/WhoShouldAttend";
-import WhySponsor from "@/component/sections/Home/WhySponsor";
 
 export default function Home() {
   return (

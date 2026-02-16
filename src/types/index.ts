@@ -4,6 +4,7 @@ export interface TeamMember {
   id: string;
   name: string;
   role: string;
+  email?: string;
   image: string | StaticImageData;
   category:
     | "All"
@@ -23,4 +24,5 @@ export interface TeamMember {
     facebook?: string;
     website?: string;
   };
+  bio?: string;
 }
