@@ -6,7 +6,7 @@ import womeninDeFi from "@/assets/images/women_in_DeFi.jpeg";
 import newHiveLogo from "@/assets/images/New_Hive_Logo1.png";
 import gida05 from "@/assets/images/GIDA-05.png";
 import blockchain from "@/assets/images/Blockchain.png";
-import ee25logo from "@/assets/images/EE ‘25 logo.png";
+import ee25logo from "@/assets/images/EE25 logo.png";
 import tglogo from "@/assets/images/TG-logo.svg";
 import genesys from "@/assets/images/Genesys Logo H.png";
 import healthscienceuniversity from "@/assets/images/university-of-health-sciences-uburu.jpg";
