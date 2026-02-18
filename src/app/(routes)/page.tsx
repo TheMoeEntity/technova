@@ -11,18 +11,8 @@ export default function Home() {
       <Hero />
       <About />
       <Partners />
-      {/* <div className="w-full flex my-8 md:mt-16 overflow-hidden">
-        <span className="bg-black h-fit flex flex-col items-center justify-center md:h-auto text-lg md:text-xl text-white py-2.5 px-3 md:px-6 whitespace-nowrap w-fit">
-          Our Partners
-        </span>
-        <div className="flex-1 w-full overflow-hidden">
-          <Banner />
-        </div>
-      </div> */}
       <Attendees />
       <WhoShouldAttend />
-      {/* <WhySponsor /> */}
-      {/* <Agenda /> */}
       <FAQSection />
     </div>
   );

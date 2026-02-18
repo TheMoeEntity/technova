@@ -33,10 +33,10 @@ const Hero = () => {
           </div>
           <div
             title="Click to view location"
-            className="flex border rounded-4xl border-gray-200 px-4 py-2 items-center gap-2 cursor-pointer hover:bg-gray-50 transition-colors"
+            className="flex border rounded-4xl border-gray-200 px-4 py-2 items-center gap-2 cursor-pointer hover:bg-gray-50 transition-colors active:scale-95"
             onClick={() => setShowMap(true)}
           >
-            <MapPin />
+            <MapPin className="animate-bounce" />
             <span>{Data.Location}</span>
           </div>
         </div>
