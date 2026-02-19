@@ -22,14 +22,14 @@ const Partners = () => {
         <div className="w-full h-full md:py-16 transition-colors duration-500 hover:bg-[#FFF9EA] pr-3 md:pr-0  border-r-[#EAEAEA] border-r border-b-[#EAEAEA] md:border-b flex justify-center items-center bg-[#FFFCFC]">
           <Image
             src={sponsorImage}
-            alt="DTCSI Sponsor"
+            alt="Technova partner: DTCSI"
             className="w-[200px] h-20 object-cover"
           />
         </div>
         <div className="md:py-12 w-full h-full md:px-8 transition-colors duration-500 hover:bg-[#FFF9EA] md:border-r-[#EAEAEA] md:border-r border-b-[#EAEAEA] md:border-b flex justify-center items-center bg-[#FFFCFC]">
           <Image
             src={ebonyistateGovernment}
-            alt="Ebonyi State Government"
+            alt="Technova partner: The Ebonyi State Government"
             width={100}
             className="w-[107px] h-[105px] object-cover"
           />
@@ -37,7 +37,7 @@ const Partners = () => {
         <div className="w-full h-full md:py-12 md:px-8 transition-colors duration-500 hover:bg-[#FFF9EA] border-r-[#EAEAEA] border-r flex border-b-[#EAEAEA] md:border-b justify-center items-center bg-[#FFFCFC]">
           <Image
             src={funai}
-            alt="FUNAI"
+            alt="Technova partner: FUNAI"
             width={100}
             className="w-[99px] h-[99px] object-cover"
           />
@@ -45,7 +45,7 @@ const Partners = () => {
         <div className="w-full h-full md:py-12 md:px-8 transition-colors duration-500 border-r-[#EAEAEA] border-r hover:bg-[#FFF9EA] flex border-b-[#EAEAEA] md:border-b justify-center items-center bg-[#FFFCFC]">
           <Image
             src={ebsu}
-            alt="EBSU"
+            alt="Technova partner: Ebonyi State University (EBSU)"
             width={100}
             className="w-[82px] h-[99px] object-cover"
           />
@@ -53,7 +53,7 @@ const Partners = () => {
         <div className="w-full border-r-[#EAEAEA] border-r h-full md:py-12 md:px-8 transition-colors duration-500 hover:bg-[#FFF9EA] flex border-b-[#EAEAEA] md:border-b justify-center items-center bg-[#FFFCFC]">
           <Image
             src={healthscienceuniversity}
-            alt="University of Health Sciences"
+            alt="Technova partner: David Umahi Federal University of Health Sciences"
             width={100}
             className="w-[100px] h-[100px] object-cover"
           />
@@ -61,7 +61,7 @@ const Partners = () => {
         <div className="w-full h-full md:py-3 md:px-3 transition-colors duration-500 hover:bg-[#FFF9EA] flex justify-center items-center border-b-[#EAEAEA] md:border-b bg-[#FFFCFC]">
           <Image
             src={womeninDeFi}
-            alt="Women in DeFi"
+            alt="Technova partner: Women in DeFi"
             width={100}
             className="w-[200px] h-[200px] object-cover"
           />
@@ -69,7 +69,7 @@ const Partners = () => {
         <div className="w-full border-r-[#EAEAEA] border-r h-full md:py-2 md:px-2 transition-colors duration-500 hover:bg-[#FFF9EA] flex justify-center items-center bg-[#FFFCFC]">
           <Image
             src={newHiveLogo}
-            alt="New Hive"
+            alt="Technova partner: Inside the Hive"
             width={100}
             className="w-[100px] h-[100px] object-cover"
           />
@@ -77,7 +77,7 @@ const Partners = () => {
         <div className="w-full border-r-[#EAEAEA] border-r h-full md:py-2 md:px-2 transition-colors duration-500 hover:bg-[#FFF9EA] flex justify-center items-center bg-[#FFFCFC]">
           <Image
             src={gida05}
-            alt="GIDA"
+            alt="Technova partner: GINAKEV Digital Academy (GIDA)"
             width={100}
             className="w-[200px] h-[200px] object-cover"
           />
@@ -85,7 +85,7 @@ const Partners = () => {
         <div className="w-full border-r-[#EAEAEA] border-r h-full md:py-2 md:px-2 transition-colors duration-500 hover:bg-[#FFF9EA] flex justify-center items-center bg-[#FFFCFC]">
           <Image
             src={blockchain}
-            alt="Blockchain University of Nigeria"
+            alt="Technova partner: Blockchain University of Nigeria"
             width={100}
             className="w-[200px] h-[40px] object-cover"
           />
@@ -93,7 +93,7 @@ const Partners = () => {
         <div className="w-full border-r-[#EAEAEA] border-r h-full md:py-2 md:px-2 transition-colors duration-500 hover:bg-[#FFF9EA] flex justify-center items-center bg-[#FFFCFC]">
           <Image
             src={ee25logo}
-            alt="EE '25 logo"
+            alt="Technova partner: ETH Enugu '25"
             width={100}
             className="w-[200px] h-[200px] object-cover"
           />
@@ -101,7 +101,7 @@ const Partners = () => {
         <div className="w-full border-r-[#EAEAEA] border-r h-full md:py-2 md:px-2 transition-colors duration-500 hover:bg-[#FFF9EA] flex justify-center items-center bg-[#FFFCFC]">
           <Image
             src={tglogo}
-            alt="The Garage"
+            alt="Technova partner: The Garage"
             width={100}
             className="w-[150px] h-[100px] object-cover"
           />
@@ -109,7 +109,7 @@ const Partners = () => {
         <div className="w-full border-r-[#EAEAEA] border-r h-full md:py-2 md:px-2 transition-colors duration-500 hover:bg-[#FFF9EA] flex justify-center items-center bg-[#FFFCFC]">
           <Image
             src={genesys}
-            alt="Genesys"
+            alt="Technova partner: Genesys"
             width={100}
             className="w-[170px] h-[40px] object-contain"
           />
