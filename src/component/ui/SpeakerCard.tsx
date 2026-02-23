@@ -70,7 +70,7 @@ const SpeakerCard: React.FC<Speaker> = ({
         </div>
 
         {/* Info */}
-        <div className="px-4 py-8">
+        <div className="px-4 py-5 h-auto">
           <h3 className="font-bold text-lg leading-tight">{name}</h3>
           <p className="text-sm text-gray-500 mt-1 line-clamp-2">{role}</p>
         </div>

@@ -261,7 +261,7 @@ export const speakers: Speaker[] = [
     name: "Ifeanyi",
     email: "ifeanyi.oyom@gmail.com",
     role: "Feezy",
-    image: "/speakers/ifeanyi Oyom.jpeg",
+    image: "/speakers/Ifeanyi Oyom.jpeg",
     bio: "Feezy",
     category: "All",
     socials: {},
