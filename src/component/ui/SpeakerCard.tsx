@@ -56,7 +56,7 @@ const SpeakerCard: React.FC<Speaker> = ({
         layoutId={`speaker-${id}`}
         onClick={() => setOpen(true)}
         whileHover={{ y: -4 }}
-        className="flex flex-col cursor-pointer h-auto bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+        className="flex flex-col cursor-pointer h-full bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
       >
         {/* Image */}
         <div className="relative w-full h-72 md:h-80 bg-gray-100">
@@ -71,7 +71,9 @@ const SpeakerCard: React.FC<Speaker> = ({
 
         {/* Info */}
         <div className="px-4 py-5 h-auto">
-          <h3 className="font-bold text-lg leading-tight">{name}</h3>
+          <h3 className="font-bold text-lg leading-tight line-clamp-2">
+            {name}
+          </h3>
           <p className="text-sm text-gray-500 mt-1 line-clamp-2">{role}</p>
         </div>
       </motion.div>
@@ -99,7 +101,7 @@ const SpeakerCard: React.FC<Speaker> = ({
               </button>
 
               {/* Image */}
-              <div className="relative w-full h-[55vh] bg-gray-100">
+              <div className="relative w-full h-[65vh] bg-gray-100">
                 <Image
                   src={image || defaultPhoto}
                   alt={name}
