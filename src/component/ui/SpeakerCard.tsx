@@ -59,7 +59,7 @@ const SpeakerCard: React.FC<Speaker> = ({
         className="flex flex-col cursor-pointer h-auto bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
       >
         {/* Image */}
-        <div className="relative w-full h-64 bg-gray-100">
+        <div className="relative w-full h-72 md:h-80 bg-gray-100">
           <Image
             src={image || defaultPhoto}
             alt={name}
