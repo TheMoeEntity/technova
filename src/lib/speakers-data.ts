@@ -32,16 +32,6 @@ export const speakers: Speaker[] = [
     socials: {},
   },
   {
-    id: "sp-prof-micheal-ugota-awoke",
-    name: "Prof. Micheal Ugota Awoke",
-    email: "",
-    role: "Vice Chancellor, Ebonyi State University (EBSU)",
-    image: "/speakers/prof-michael.jpeg",
-    bio: "The Vice Chancellor (VC) of Ebonyi State University (EBSU)",
-    category: "All",
-    socials: {},
-  },
-  {
     id: "sp-professor-daniel-nwachukwu",
     name: "Professor Daniel Nwachukwu",
     email: "",
@@ -52,7 +42,16 @@ export const speakers: Speaker[] = [
     category: "All",
     socials: {},
   },
-
+  {
+    id: "sp-prof-micheal-ugota-awoke",
+    name: "Prof. Micheal Ugota Awoke",
+    email: "",
+    role: "Vice Chancellor, Ebonyi State University (EBSU)",
+    image: "/speakers/prof-michael.jpeg",
+    bio: "The Vice Chancellor (VC) of Ebonyi State University (EBSU)",
+    category: "All",
+    socials: {},
+  },
   // ========================
   // CEO (BRILL)
   // ========================
