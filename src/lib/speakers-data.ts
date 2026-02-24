@@ -21,16 +21,6 @@ export const speakers: Speaker[] = [
   // VICE CHANCELLORS
   // ========================
   {
-    id: "sp-prof-micheal-ugota-awoke",
-    name: "Prof. Micheal Ugota Awoke",
-    email: "",
-    role: "Vice Chancellor, Ebonyi State University (EBSU)",
-    image: "/speakers/prof-michael.jpeg",
-    bio: "The Vice Chancellor (VC) of Ebonyi State University (EBSU)",
-    category: "All",
-    socials: {},
-  },
-  {
     id: "sp-prof-chigozie-jesse-uneke",
     name: "Prof. Chigozie Jesse Uneke",
     email: "",
@@ -38,6 +28,16 @@ export const speakers: Speaker[] = [
     role: "Vice Chancellor, David Umahi Federal University of Health Sciences (DUFUHS)",
     image: "/speakers/prof-chigz.jpeg",
     bio: "Vice Chancellor of David Umahi Federal University of Health Sciences (DUFUHS)",
+    category: "All",
+    socials: {},
+  },
+  {
+    id: "sp-prof-micheal-ugota-awoke",
+    name: "Prof. Micheal Ugota Awoke",
+    email: "",
+    role: "Vice Chancellor, Ebonyi State University (EBSU)",
+    image: "/speakers/prof-michael.jpeg",
+    bio: "The Vice Chancellor (VC) of Ebonyi State University (EBSU)",
     category: "All",
     socials: {},
   },
