@@ -27,7 +27,7 @@ const STYLES: StyleConfig[] = [
     label: "Futuristic",
     thumb: "/thumbnail-3.png",
     frame: "/technova-dp-3.svg",
-    photoRect: { x: 148, y: 160, w: 304, h: 260 },
+    photoRect: { x: 147.5, y: 148, w: 303.5, h: 270 },
     nameFill: "#ffffff",
     profFill: "#e0e7ff",
     circular: false,
@@ -37,7 +37,7 @@ const STYLES: StyleConfig[] = [
     label: "Classic",
     thumb: "/thumbnail-1.png",
     frame: "/technova-dp-1.svg",
-    photoRect: { x: 148, y: 160, w: 304, h: 260 },
+    photoRect: { x: 148, y: 148, w: 304, h: 270 },
     nameFill: "#ffffff",
     profFill: "#d1d5db",
     circular: false,
@@ -47,7 +47,7 @@ const STYLES: StyleConfig[] = [
     label: "Dark Tech",
     thumb: "/thumbnail-2.png",
     frame: "/technova-dp-2.svg",
-    photoRect: { x: 148, y: 160, w: 304, h: 260 },
+    photoRect: { x: 148, y: 148, w: 304, h: 270 },
     nameFill: "#fbbf24",
     profFill: "#ffffff",
     circular: false,
@@ -137,19 +137,19 @@ async function renderCanvas(
     const barH = 55;
     const barY = y + h - barH + 2;
 
-    ctx.fillStyle = "rgba(0,0,0,0.65)";
+    ctx.fillStyle = "rgba(0,0,0,0.85)";
     ctx.fillRect(x, barY, w, barH);
 
     ctx.textAlign = "center";
     if (name) {
       ctx.fillStyle = style.nameFill;
       ctx.font = `bold 20px 'Bricolage Grotesque', sans-serif`;
-      ctx.fillText(name, x + w / 2, barY + 24, w - 10);
+      ctx.fillText(name, x + w / 2, barY + 30, w - 10);
     }
     if (profession) {
       ctx.fillStyle = style.profFill;
       ctx.font = `15px 'Bricolage Grotesque', sans-serif`;
-      ctx.fillText(profession, x + w / 2, barY + 45, w - 10);
+      ctx.fillText(profession, x + w / 2, barY + 49, w - 10);
     }
   }
 }
@@ -445,7 +445,7 @@ export default function GenerateDPSection() {
           />
         </div>
 
-        <div className="w-full md:mt-5 px-3 flex md:justify-end md:pr-8">
+        <div className="w-full md:mt-5 px-3 flex flex-col gap-5 md:items-end md:justify-end md:pr-8">
           <button
             onClick={handleGenerate}
             disabled={generating}
@@ -453,16 +453,16 @@ export default function GenerateDPSection() {
           >
             {generating ? "Generating…" : "Generate DP"}
           </button>
-        </div>
-        <div className="w-ful flex md:justify-start justify-center">
-          <button
-            type="button"
-            onClick={() => setStep(1)}
-            className="w-fit flex items-center gap-1 text-sm text-gray-500 hover:text-black transition-colors mx-auto"
-          >
-            <ChevronLeft className="w-4 h-4" />
-            Back
-          </button>
+          <div className="w-ful flex md:justify-start justify-center">
+            <button
+              type="button"
+              onClick={() => setStep(1)}
+              className="w-fit flex items-center gap-1 text-sm text-gray-500 hover:text-black transition-colors mx-auto"
+            >
+              <ChevronLeft className="w-4 h-4" />
+              Back
+            </button>
+          </div>
         </div>
       </div>
     </div>
