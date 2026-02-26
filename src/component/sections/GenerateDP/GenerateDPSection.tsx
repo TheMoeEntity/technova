@@ -388,7 +388,7 @@ export default function GenerateDPSection() {
           />
         </div>
         {/* Style Thumbnails */}
-        <div className="flex gap-3">
+        <div className="flex justify-center md:justify-start gap-3">
           {STYLES.map((s) => (
             <button
               key={s.id}
@@ -454,14 +454,16 @@ export default function GenerateDPSection() {
             {generating ? "Generating…" : "Generate DP"}
           </button>
         </div>
-
-        <button
-          onClick={() => setStep(1)}
-          className="flex items-center gap-1 text-sm text-gray-500 hover:text-black transition-colors mx-auto"
-        >
-          <ChevronLeft className="w-4 h-4" />
-          Back
-        </button>
+        <div className="w-ful flex md:justify-start justify-center">
+          <button
+            type="button"
+            onClick={() => setStep(1)}
+            className="w-fit flex items-center gap-1 text-sm text-gray-500 hover:text-black transition-colors mx-auto"
+          >
+            <ChevronLeft className="w-4 h-4" />
+            Back
+          </button>
+        </div>
       </div>
     </div>
   );
