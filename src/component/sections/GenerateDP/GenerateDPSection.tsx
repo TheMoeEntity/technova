@@ -23,6 +23,16 @@ const CANVAS_SIZE = 600;
 
 const STYLES: StyleConfig[] = [
   {
+    id: 3,
+    label: "Futuristic",
+    thumb: "/thumbnail-3.png",
+    frame: "/technova-dp-3.svg",
+    photoRect: { x: 148, y: 160, w: 304, h: 260 },
+    nameFill: "#ffffff",
+    profFill: "#e0e7ff",
+    circular: false,
+  },
+  {
     id: 1,
     label: "Classic",
     thumb: "/thumbnail-1.png",
@@ -40,16 +50,6 @@ const STYLES: StyleConfig[] = [
     photoRect: { x: 148, y: 160, w: 304, h: 260 },
     nameFill: "#fbbf24",
     profFill: "#ffffff",
-    circular: false,
-  },
-  {
-    id: 3,
-    label: "Futuristic",
-    thumb: "/thumbnail-3.png",
-    frame: "/technova-dp-3.svg",
-    photoRect: { x: 148, y: 160, w: 304, h: 260 },
-    nameFill: "#ffffff",
-    profFill: "#e0e7ff",
     circular: false,
   },
 ];
@@ -143,13 +143,13 @@ async function renderCanvas(
     ctx.textAlign = "center";
     if (name) {
       ctx.fillStyle = style.nameFill;
-      ctx.font = `bold 15px 'Bricolage Grotesque', sans-serif`;
-      ctx.fillText(name, x + w / 2, barY + 20, w - 10);
+      ctx.font = `bold 20px 'Bricolage Grotesque', sans-serif`;
+      ctx.fillText(name, x + w / 2, barY + 24, w - 10);
     }
     if (profession) {
       ctx.fillStyle = style.profFill;
-      ctx.font = `12px 'Bricolage Grotesque', sans-serif`;
-      ctx.fillText(profession, x + w / 2, barY + 40, w - 10);
+      ctx.font = `15px 'Bricolage Grotesque', sans-serif`;
+      ctx.fillText(profession, x + w / 2, barY + 45, w - 10);
     }
   }
 }
