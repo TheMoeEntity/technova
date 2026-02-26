@@ -10,6 +10,7 @@ import ee25logo from "@/assets/images/EE25 logo.png";
 import tglogo from "@/assets/images/TG-logo.svg";
 import genesys from "@/assets/images/Genesys Logo H.png";
 import healthscienceuniversity from "@/assets/images/university-of-health-sciences-uburu.jpg";
+import koru from "@/assets/images/Koru.jpeg";
 import Image from "next/image";
 
 const Partners = () => {
@@ -66,7 +67,7 @@ const Partners = () => {
             className="w-[200px] h-[200px] object-cover"
           />
         </div>
-        <div className="w-full border-r-[#EAEAEA] border-r h-full md:py-2 md:px-2 transition-colors duration-500 hover:bg-[#FFF9EA] flex justify-center items-center bg-[#FFFCFC]">
+        <div className="w-full border-r-[#EAEAEA] border-b-[#EAEAEA] border-r h-full  border-b md:py-2 md:px-2 transition-colors duration-500 hover:bg-[#FFF9EA] flex justify-center items-center bg-[#FFFCFC]">
           <Image
             src={newHiveLogo}
             alt="Technova partner: Inside the Hive"
@@ -112,6 +113,14 @@ const Partners = () => {
             alt="Technova partner: Genesys"
             width={100}
             className="w-[170px] h-[40px] object-contain"
+          />
+        </div>
+        <div className="w-full border-r-[#EAEAEA] border-r h-full md:py-2 md:px-2 transition-colors duration-500 hover:bg-[#FFF9EA] flex justify-center items-center bg-[#FFFCFC]">
+          <Image
+            src={koru}
+            alt="Technova partner: Koru"
+            width={100}
+            className="w-[130px] h-[130px] object-cover"
           />
         </div>
       </div>
