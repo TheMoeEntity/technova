@@ -31,7 +31,8 @@ const BrandedImage = () => {
         <div className="mx-auto mt-10 max-w-5xl">
           <Image
             src={scrapbook}
-            alt="Technova DP"
+            alt="Technova Scrapbook"
+            priority={true}
             className="w-full h-auto object-cover"
           />
         </div>
