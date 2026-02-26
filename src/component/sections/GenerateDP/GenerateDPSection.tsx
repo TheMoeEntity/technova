@@ -1,7 +1,9 @@
 "use client";
 
 import React, { useRef, useState, useCallback, useEffect } from "react";
-import { Check, Upload, Download, Share2, ChevronLeft } from "lucide-react";
+import { Check, Download, Share2, ChevronLeft } from "lucide-react";
+import dropImage from "@/assets/images/drop-image.svg";
+import NextImage from "next/image";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type Step = 1 | 2 | 3;
@@ -23,7 +25,7 @@ const STYLES: StyleConfig[] = [
   {
     id: 1,
     label: "Classic",
-    thumb: "/technova-dp-1.svg",
+    thumb: "/thumbnail-1.png",
     frame: "/technova-dp-1.svg",
     photoRect: { x: 148, y: 160, w: 304, h: 260 },
     nameFill: "#ffffff",
@@ -33,9 +35,9 @@ const STYLES: StyleConfig[] = [
   {
     id: 2,
     label: "Dark Tech",
-    thumb: "/dp-frame-2.png",
-    frame: "/dp-frame-2.png",
-    photoRect: { x: 172, y: 138, w: 256, h: 230 },
+    thumb: "/thumbnail-2.png",
+    frame: "/technova-dp-2.svg",
+    photoRect: { x: 148, y: 160, w: 304, h: 260 },
     nameFill: "#fbbf24",
     profFill: "#ffffff",
     circular: false,
@@ -43,12 +45,12 @@ const STYLES: StyleConfig[] = [
   {
     id: 3,
     label: "Futuristic",
-    thumb: "/dp-frame-3.png",
-    frame: "/dp-frame-3.png",
-    photoRect: { x: 155, y: 135, w: 290, h: 260 },
+    thumb: "/thumbnail-3.png",
+    frame: "/technova-dp-3.svg",
+    photoRect: { x: 148, y: 160, w: 304, h: 260 },
     nameFill: "#ffffff",
     profFill: "#e0e7ff",
-    circular: true,
+    circular: false,
   },
 ];
 
@@ -161,7 +163,7 @@ const StepIndicator = ({ step }: { step: Step }) => {
   ];
 
   return (
-    <div className="flex items-start justify-center gap-0 mb-10">
+    <div className="flex items-start justify-center gap-0 mb-10 md:mt-20 max-w-4xl mx-auto">
       {steps.map((s, idx) => {
         const done = step > s.n;
         const active = step === s.n;
@@ -309,27 +311,31 @@ export default function GenerateDPSection() {
 
   // ── Step 1: Upload ─────────────────────────────────────────────────────────
   const renderUpload = () => (
-    <div className="flex flex-col items-center gap-6 w-full max-w-lg mx-auto">
+    <div className="flex flex-col mt-20 items-center gap-6 w-full max-w-5xl mx-auto">
       <div
         onClick={() => fileInputRef.current?.click()}
         onDrop={handleDrop}
         onDragOver={(e) => e.preventDefault()}
-        className="border-2 border-dashed border-gray-300 hover:border-black transition-colors cursor-pointer rounded-2xl w-full p-12 flex flex-col items-center gap-4 bg-white group"
+        className=" border-gray-300 hover:border-black transition-colors cursor-pointer rounded-2xl w-full p-12 flex flex-col items-center gap-4 bg-white group"
       >
-        <div className="w-16 h-16 rounded-full bg-gray-100 group-hover:bg-gray-200 flex items-center justify-center transition-colors">
-          <Upload className="w-7 h-7 text-gray-500" />
+        <div className="w-50 h-50 rounded-full bg-gray-100 group-hover:bg-gray-200 flex items-center justify-center transition-colors">
+          <NextImage
+            src={dropImage}
+            alt="Drop Image"
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="text-center">
           <p className="font-semibold text-gray-800">
             Click to upload your photo
           </p>
-          <p className="text-sm text-gray-400 mt-1">or drag and drop here</p>
-          <p className="text-xs text-gray-400 mt-2">PNG, JPG up to 10MB</p>
+          <p className=" text-gray-400 mt-1">or drag and drop here</p>
+          <p className=" text-gray-400 mt-2">Supported file types: PNG, JPG</p>
         </div>
       </div>
 
       {userPhoto && (
-        <div className="flex items-center gap-3 w-full bg-white rounded-xl px-4 py-3 shadow-sm">
+        <div className="w-fit flex justify-center items-center gap-3 bg-white rounded-xl px-4 py-3 shadow-sm">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={userPhoto}
@@ -371,13 +377,13 @@ export default function GenerateDPSection() {
   const renderStyle = () => (
     <div className="flex flex-col lg:flex-row gap-8 w-full max-w-5xl mx-auto">
       {/* Canvas Preview */}
-      <div className="flex-1 flex flex-col gap-4">
-        <div className="bg-white rounded-2xl shadow-sm p-4 flex items-center justify-center">
+      <div className="order-2 md:order-1 flex-1 w-full flex flex-col gap-4">
+        <div className="w-full bg-white rounded-2xl shadow-sm p-4 flex items-center justify-center">
           <canvas
             ref={previewCanvasRef}
             width={CANVAS_SIZE}
             height={CANVAS_SIZE}
-            className="w-full max-w-sm rounded-xl"
+            className="w-full max-w-lg rounded-xl"
             style={{ imageRendering: "crisp-edges" }}
           />
         </div>
@@ -387,7 +393,7 @@ export default function GenerateDPSection() {
             <button
               key={s.id}
               onClick={() => setSelectedStyle(s)}
-              className={`flex-1 rounded-xl overflow-hidden border-2 transition-all duration-200 ${
+              className={` rounded-xl overflow-hidden border-2 transition-all duration-200 ${
                 selectedStyle.id === s.id
                   ? "border-black scale-105 shadow-md"
                   : "border-transparent opacity-70 hover:opacity-100"
@@ -399,19 +405,21 @@ export default function GenerateDPSection() {
                 alt={s.label}
                 className="w-full h-20 object-cover"
               />
-              <p className="text-xs font-medium text-center py-1 bg-white">
+              {/* <p className="text-xs font-medium text-center py-1 bg-white">
                 {s.label}
-              </p>
+              </p> */}
             </button>
           ))}
         </div>
       </div>
 
       {/* Form */}
-      <div className="lg:w-80 bg-white rounded-2xl shadow-sm p-6 flex flex-col gap-5">
-        <h3 className="text-xl font-bold">Create your DP</h3>
-
-        <div className="flex flex-col gap-2">
+      <div className="order-1 md:order-2 flex-1 h-fit bg-white rounded-2xl shadow-sm py-6 flex flex-col gap-5">
+        <h3 className="text-3xl md:text-4xl md:mt-10 text-center font-bold">
+          Create your DP
+        </h3>
+        <hr className="w-full border-gray-200 md:mt-10" />
+        <div className="px-3 md:px-8 flex flex-col gap-2">
           <label className="text-sm font-medium text-gray-700">
             Name/Nickname
           </label>
@@ -424,7 +432,7 @@ export default function GenerateDPSection() {
           />
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="px-3 md:px-8 flex flex-col gap-2">
           <label className="text-sm font-medium text-gray-700">
             Profession
           </label>
@@ -437,13 +445,15 @@ export default function GenerateDPSection() {
           />
         </div>
 
-        <button
-          onClick={handleGenerate}
-          disabled={generating}
-          className="mt-auto bg-black text-white rounded-xl px-5 py-3 text-sm font-semibold hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {generating ? "Generating…" : "Generate DP"}
-        </button>
+        <div className="w-full md:mt-5 px-3 flex md:justify-end md:pr-8">
+          <button
+            onClick={handleGenerate}
+            disabled={generating}
+            className="bg-black w-full md:w-fit text-white rounded-md px-3 py-2 text-sm font-semibold hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {generating ? "Generating…" : "Generate DP"}
+          </button>
+        </div>
 
         <button
           onClick={() => setStep(1)}
@@ -493,14 +503,14 @@ export default function GenerateDPSection() {
   );
 
   return (
-    <section className="min-h-screen bg-[#f4f4f4] font-bricolage-grotesque px-4 py-16">
-      <div className="max-w-5xl mx-auto">
+    <section className="min-h-screen w-full bg-[#f4f4f4] font-bricolage-grotesque px-4 py-16">
+      <div className="mx-auto">
         {/* Header */}
         <div className="text-center mb-10">
           <h1 className="text-3xl md:text-4xl font-bold">
             Generate Pictures and Show them off!
           </h1>
-          <p className="text-gray-500 mt-2 text-sm md:text-base">
+          <p className="text-gray-500 mt-2 text-sm md:text-lg">
             Create a Technova branded image to announce your attendance!
           </p>
         </div>

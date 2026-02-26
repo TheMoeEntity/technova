@@ -41,7 +41,7 @@ export default function Footer() {
             <Link href="/speakers">Speakers</Link>
             <Link href="/team">Team</Link>
 
-            <Link href="/generate-dp">Dp Generator</Link>
+            <Link href="/branded-image">Dp Generator</Link>
             <Link href="/contact">Contact us</Link>
           </div>
         </div>

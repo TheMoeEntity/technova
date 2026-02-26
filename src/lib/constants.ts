@@ -53,7 +53,7 @@ export const links = [
 
 export const getInvolvedLinks = [
   {
-    href: "/generate-dp",
+    href: "/branded-image",
     label: "Generate DP",
   },
   {

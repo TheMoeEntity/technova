@@ -29,7 +29,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
     },
     {
-      url: url + "/generate-dp",
+      url: url + "/branded-image",
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 1,
+    },
+    {
+      url: url + "/branded-image/generate-dp",
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 1,
