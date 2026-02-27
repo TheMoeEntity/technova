@@ -1,4 +1,4 @@
-import { TeamMember } from "@/types";
+import { StyleConfig, TeamMember } from "@/types";
 import obinna from "@/assets/images/obinna-adum.svg";
 import chuksOkonkwo from "@/assets/images/chuks-okonkwo.svg";
 import toochukwuOkoro from "@/assets/images/toochukwu-okoro.svg";
@@ -420,4 +420,39 @@ export const categories = [
   "Engineering",
   "Marketing",
   "Media",
+];
+
+export const CANVAS_SIZE = 600;
+
+export const STYLES: StyleConfig[] = [
+  {
+    id: 3,
+    label: "Futuristic",
+    thumb: "/thumbnail-3.png",
+    frame: "/technova-dp-3.svg",
+    photoRect: { x: 147.5, y: 148, w: 303.5, h: 270 },
+    nameFill: "#ffffff",
+    profFill: "#e0e7ff",
+    circular: false,
+  },
+  {
+    id: 1,
+    label: "Classic",
+    thumb: "/thumbnail-1.png",
+    frame: "/technova-dp-1.svg",
+    photoRect: { x: 148, y: 148, w: 304, h: 270 },
+    nameFill: "#ffffff",
+    profFill: "#d1d5db",
+    circular: false,
+  },
+  {
+    id: 2,
+    label: "Dark Tech",
+    thumb: "/thumbnail-2.png",
+    frame: "/technova-dp-2.svg",
+    photoRect: { x: 148, y: 148, w: 304, h: 270 },
+    nameFill: "#fbbf24",
+    profFill: "#ffffff",
+    circular: false,
+  },
 ];

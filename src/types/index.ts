@@ -1,4 +1,17 @@
 import { StaticImageData } from "next/image";
+// ─── Types ────────────────────────────────────────────────────────────────────
+export type Step = 1 | 2 | 3;
+
+export interface StyleConfig {
+  id: number;
+  label: string;
+  thumb: string;
+  frame: string;
+  photoRect: { x: number; y: number; w: number; h: number };
+  nameFill: string;
+  profFill: string;
+  circular: boolean;
+}
 
 export interface Speaker {
   id: string;
