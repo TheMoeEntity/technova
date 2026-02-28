@@ -14,17 +14,17 @@ const BrandedImage = () => {
       {/* <div className="flex flex-col items-center gap-6 justify-center pt-32 px-4 md:px-8">
         <ComingSoon />
       </div> */}
-      <div className="flex flex-col items-center gap-6 justify-center py-32 px-4 md:px-8">
-        <h1 className="text-4xl max-w-3xl mx-auto text-center  xl:text-5xl font-bold">
+      <div className="flex flex-col items-center gap-4 justify-center py-32 px-4 md:px-8">
+        <h1 className="text-4xl max-w-lg mx-auto text-center  xl:text-5xl font-bold">
           Generate Pictures and Show them off!
         </h1>
-        <p className="max-w-2xl mx-auto text-center">
+        <p className="max-w-2xl text-lg mx-auto text-center">
           Create a Technova branded image to announce your attendance!
         </p>
         <Link
           href="/branded-image/generate-dp"
           //   href="#"
-          className="bg-black text-white px-4 py-2 rounded-lg"
+          className="bg-black mt-8 text-white px-4 py-2 rounded-lg"
         >
           Generate Your DP!
         </Link>
