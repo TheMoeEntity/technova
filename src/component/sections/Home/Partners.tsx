@@ -115,7 +115,7 @@ const Partners = () => {
             className="w-[170px] h-[40px] object-contain"
           />
         </div>
-        <div className="w-full pt-10 md:pt-0 border-r-[#EAEAEA] border-r h-full md:py-2 md:px-2 transition-colors duration-500 hover:bg-[#FFF9EA] flex justify-center items-center bg-[#FFFCFC]">
+        <div className="w-full pt-10 md:pt-5 border-r-[#EAEAEA] border-r h-full md:py-2 md:px-2 transition-colors duration-500 hover:bg-[#FFF9EA] flex justify-center items-center bg-[#FFFCFC]">
           <Image
             src={koru}
             alt="Technova partner: Koru"
