@@ -19,9 +19,10 @@ const Header = () => {
       <Link href="/" className="z-50">
         <Image
           src={technovalogo}
-          alt="Logo"
+          alt="Technova Logo"
           width={95}
           height={95}
+          loading="eager"
           className="w-full h-auto"
         />
       </Link>
