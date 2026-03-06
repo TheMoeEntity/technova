@@ -138,7 +138,7 @@ export default function GenerateDPSection() {
           <img
             src={userPhoto}
             alt="Preview"
-            className="w-12 h-12 rounded-full object-cover border-2 border-gray-200 flex-shrink-0"
+            className="w-12 h-12 rounded-full object-cover border-2 border-gray-200 shrink-0"
           />
           <div className="flex-1 min-w-0">
             <p className="text-sm font-medium">Photo uploaded ✓</p>
@@ -154,7 +154,7 @@ export default function GenerateDPSection() {
           </div>
           <button
             onClick={() => setStep(2)}
-            className="bg-black text-white rounded-xl px-5 py-2.5 text-sm font-semibold hover:bg-gray-800 transition-colors flex-shrink-0"
+            className="bg-black text-white rounded-xl px-5 py-2.5 text-sm font-semibold hover:bg-gray-800 transition-colors shrink-0"
           >
             Continue →
           </button>

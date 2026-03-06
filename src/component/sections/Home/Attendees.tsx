@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import iconsDev from "@/assets/images/icons-dev.svg";
 import iconsent from "@/assets/images/icons-ent.svg";
 import iconStudents from "@/assets/images/icons-students.svg";
