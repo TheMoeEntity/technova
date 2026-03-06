@@ -5,6 +5,7 @@ import FAQSection from "@/component/sections/Home/FAQ";
 // import PartnersMarquee from "@/component/sections/Home/PartnersMarquee";
 import { WhoShouldAttend } from "@/component/sections/Home/WhoShouldAttend";
 import Partners from "@/component/sections/Home/Partners";
+import Sponsors from "@/component/sections/Home/Sponsors";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <About />
       {/* <PartnersMarquee /> */}
+      <Sponsors />
       <Partners />
       <Attendees />
       <WhoShouldAttend />

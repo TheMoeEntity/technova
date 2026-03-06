@@ -20,13 +20,13 @@ const Partners = () => {
         Our Partners
       </h2>
       <div className="grid mx-auto mb-10 max-w-7xl md:gap-y-0 gap-x-0 grid-cols-2 md:grid-cols-3 xl:md:grid-cols-6 items-center place-items-center justify-center px-3 md:px-0 py-1 mt-10 md:mt-20">
-        <div className="w-full h-full md:py-16 transition-colors duration-500 hover:bg-[#FFF9EA] pr-3 md:pr-0  border-r-[#EAEAEA] border-r border-b-[#EAEAEA] md:border-b flex justify-center items-center bg-[#FFFCFC]">
+        {/* <div className="w-full h-full md:py-16 transition-colors duration-500 hover:bg-[#FFF9EA] pr-3 md:pr-0  border-r-[#EAEAEA] border-r border-b-[#EAEAEA] md:border-b flex justify-center items-center bg-[#FFFCFC]">
           <Image
             src={sponsorImage}
             alt="Technova partner: DTCSI"
             className="w-[200px] h-20 object-cover"
           />
-        </div>
+        </div> */}
         <div className="md:py-12 w-full h-full md:px-8 transition-colors duration-500 hover:bg-[#FFF9EA] md:border-r-[#EAEAEA] md:border-r border-b-[#EAEAEA] md:border-b flex justify-center items-center bg-[#FFFCFC]">
           <Image
             src={ebonyistateGovernment}
