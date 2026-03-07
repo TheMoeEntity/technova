@@ -126,7 +126,7 @@ export const speakers: Speaker[] = [
     name: "Okwosi Obed Chichetaram",
     email: "Trustnova@gmail.com",
     role: "Founder, Trustnova • Tech & Innovation Communicator",
-    image: "/speakers/trust-nova.jpeg",
+    image: "/speakers/Obed_Chinecherem.jpg",
     bio: "Founder, Trustnova | Blogging, real estate, tech & innovation.",
     category: "All",
     socials: {},
