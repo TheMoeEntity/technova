@@ -214,7 +214,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: "27",
-    name: "Nnanna Princewill",
+    name: "Nnanna Prince",
     role: "Videographer",
     image: nnannaPrincewill,
     category: "Media",
