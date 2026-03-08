@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import TeamSection from "@/component/sections/Team/TeamSection";
+
+export const metadata: Metadata = {
+  title: "Team | The TechNova Summit",
+  description:
+    "Meet the passionate team behind The TechNova Summit, dedicated to bringing tech innovation and Web3 opportunities to Africa.",
+};
 
 const Team = () => {
   return (

@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import AllSpeakers from "@/component/sections/Speakers/AllSpeakers";
+
+export const metadata: Metadata = {
+  title: "Speakers | The TechNova Summit",
+  description:
+    "Meet the brilliant minds shaping the future of technology at The TechNova Summit. Discover our lineup of expert speakers, founders, and innovators.",
+};
 
 const Speakers = () => {
   return (

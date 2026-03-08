@@ -1,9 +1,17 @@
+import type { Metadata } from "next";
 import React from "react";
 import card1 from "@/assets/images/participants-card.svg";
 import card2 from "@/assets/images/speakers-card.svg";
 import card3 from "@/assets/images/projects-card.svg";
 import card4 from "@/assets/images/timeline-card.svg";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Sponsors | The TechNova Summit",
+  description:
+    "Become a sponsor at The TechNova Summit. Get seen, get connected, and support the growth of Africa's tech and Web3 ecosystem.",
+};
+
 const SponsorPage = () => {
   return (
     <div className="flex flex-col min-h-screen bg-white font-bricolage-grotesque">

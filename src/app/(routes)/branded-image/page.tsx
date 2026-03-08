@@ -1,11 +1,12 @@
+import type { Metadata } from "next";
 import scrapbook from "@/assets/images/scrapbook-dp.png";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Branded Image | TechNova Africa Web3 Carnival 2026",
+export const metadata: Metadata = {
+  title: "Branded Image | The TechNova Summit",
   description:
-    "Create a Technova branded image to announce your attendance at TechNova Africa's Web3 Carnival, Mar 12-14 2026.",
+    "Create a customized TechNova branded image to announce your attendance at the TechNova Summit.",
 };
 
 const BrandedImage = () => {

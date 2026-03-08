@@ -1,9 +1,10 @@
+import type { Metadata } from "next";
 import GenerateDPSection from "@/component/sections/GenerateDP/GenerateDPSection";
 
-export const metadata = {
-  title: "Generate DP | TechNova Africa Web3 Carnival 2026",
+export const metadata: Metadata = {
+  title: "Generate DP | The TechNova Summit",
   description:
-    "Create a Technova branded image to announce your attendance at TechNova Africa's Web3 Carnival, Mar 12-14 2026.",
+    "Generate your official TechNova Summit display picture and show off your participation in Africa's premier tech event.",
 };
 
 const GenerateDP = () => {
