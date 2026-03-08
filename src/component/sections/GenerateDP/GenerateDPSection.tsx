@@ -14,6 +14,9 @@ export default function GenerateDPSection() {
   const [selectedStyle, setSelectedStyle] = useState<StyleConfig>(STYLES[0]);
   const [name, setName] = useState("");
   const [profession, setProfession] = useState("");
+  const [imagePosition, setImagePosition] = useState<
+    "top" | "center" | "bottom"
+  >("center");
   const [generating, setGenerating] = useState(false);
   const [finalDataUrl, setFinalDataUrl] = useState<string | null>(null);
 
@@ -29,8 +32,9 @@ export default function GenerateDPSection() {
       userPhoto,
       name,
       profession,
+      imagePosition,
     ).catch(console.error);
-  }, [step, selectedStyle, userPhoto, name, profession]);
+  }, [step, selectedStyle, userPhoto, name, profession, imagePosition]);
 
   // ── Handlers ─────────────────────────────────────────────────────────────────
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -60,7 +64,14 @@ export default function GenerateDPSection() {
     setGenerating(true);
     try {
       const tmpCanvas = document.createElement("canvas");
-      await renderCanvas(tmpCanvas, selectedStyle, userPhoto, name, profession);
+      await renderCanvas(
+        tmpCanvas,
+        selectedStyle,
+        userPhoto,
+        name,
+        profession,
+        imagePosition,
+      );
       setFinalDataUrl(tmpCanvas.toDataURL("image/png"));
       setStep(3);
     } catch (err) {
@@ -102,6 +113,7 @@ export default function GenerateDPSection() {
     setUserPhoto(null);
     setName("");
     setProfession("");
+    setImagePosition("center");
     setFinalDataUrl(null);
     setSelectedStyle(STYLES[0]);
     if (fileInputRef.current) fileInputRef.current.value = "";
@@ -241,6 +253,30 @@ export default function GenerateDPSection() {
             placeholder="What do you do?"
             className="border border-gray-200 rounded-lg px-3 py-2.5 text-sm outline-none focus:border-black transition-colors"
           />
+        </div>
+
+        <div className="px-3 md:px-8 flex flex-col gap-2">
+          <label className="text-sm font-medium text-gray-700">
+            Image Position
+          </label>
+          <div className="flex bg-gray-100 rounded-lg p-1">
+            {["top", "center", "bottom"].map((pos) => (
+              <button
+                key={pos}
+                type="button"
+                onClick={() =>
+                  setImagePosition(pos as "top" | "center" | "bottom")
+                }
+                className={`flex-1 text-sm py-2 rounded-md capitalize transition-colors ${
+                  imagePosition === pos
+                    ? "bg-white shadow-sm font-medium text-black"
+                    : "text-gray-500 hover:text-black hover:bg-white/50"
+                }`}
+              >
+                {pos}
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="w-full md:mt-5 px-3 flex flex-col gap-5 md:items-end md:justify-end md:pr-8">

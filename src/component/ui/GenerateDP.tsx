@@ -25,6 +25,7 @@ export async function renderCanvas(
   photo: string | null,
   name: string,
   profession: string,
+  imagePosition: "top" | "center" | "bottom" = "center",
 ): Promise<void> {
   canvas.width = CANVAS_SIZE;
   canvas.height = CANVAS_SIZE;
@@ -73,6 +74,12 @@ export async function renderCanvas(
     } else {
       sh = userImg.naturalWidth / boxAR;
       sy = (userImg.naturalHeight - sh) / 2;
+
+      if (imagePosition === "top") {
+        sy = 0;
+      } else if (imagePosition === "bottom") {
+        sy = userImg.naturalHeight - sh;
+      }
     }
     ctx.drawImage(userImg, sx, sy, sw, sh, x, y, w, h);
     ctx.restore();
