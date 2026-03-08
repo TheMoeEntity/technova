@@ -1,4 +1,4 @@
-import sponsorImage from "@/assets/images/sponsors-dtcsi.svg";
+// import sponsorImage from "@/assets/images/sponsors-dtcsi.svg";
 import ebonyistateGovernment from "@/assets/images/ebonyi-state-government.svg";
 import funai from "@/assets/images/funai.svg";
 import ebsu from "@/assets/images/ebsu.svg";

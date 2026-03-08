@@ -11,7 +11,7 @@ import jamesEmmanuella from "@/assets/images/james-emmanuella.svg";
 import nenyeKingsley from "@/assets/images/nenye-kingsley.svg";
 import odinmaMmesoma from "@/assets/images/odinma-mmesoma.svg";
 import victorIkem from "@/assets/images/victor-ikem.svg";
-// import joshuaNwankwo from "@/assets/images/joshua-nwankwo.svg";
+import mari from "@/assets/images/mari.jpg";
 import kamso from "@/assets/images/kamso.svg";
 import moses from "@/assets/images/moses-nwigberi-profile.jpeg";
 import blaise from "@/assets/images/blaise.svg";
@@ -200,6 +200,16 @@ export const teamMembers: TeamMember[] = [
       twitter: "https://x.com/NenyeKingsley?t=yPhzvPuI4AlMyBkdYhgyBg&s=09",
       linkedin:
         "https://www.linkedin.com/in/vexahlia-kingsley-409315244?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    },
+  },
+  {
+    id: "84",
+    name: "Mari Nnanna",
+    role: "Content team",
+    image: mari,
+    category: "Media",
+    socials: {
+      twitter: "https://x.com/tech_girlll?s=21",
     },
   },
   {
