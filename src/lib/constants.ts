@@ -19,6 +19,7 @@ import emmanuelIkenna from "@/assets/images/ikenna-ojimba.svg";
 import okeke from "@/assets/images/Okeke-kelechi.jpg";
 import amara2 from "@/assets/images/amara.jpeg";
 import nnannaPrincewill from "@/assets/images/nnanna_princewill.jpg";
+import klonex from "@/assets/images/klonex.jpg";
 
 export enum Data {
   Location = "The Ecumenical Centre, Abakaliki",
@@ -139,7 +140,7 @@ export const teamMembers: TeamMember[] = [
   {
     id: "12",
     name: "Odinma Nmesoma",
-    role: "Designer",
+    role: "Illustrator",
     image: odinmaMmesoma,
     category: "Design",
     socials: {
@@ -232,6 +233,18 @@ export const teamMembers: TeamMember[] = [
       // twitter: "https://x.com/nnanna_princewill",
       instagram:
         "https://www.instagram.com/nnanna_prince_?igsh=Z3I1Y3Zld2tnbzZs",
+    },
+  },
+  {
+    id: "410",
+    name: "Klonex",
+    role: "Motion designer, TECHNOVA",
+    image: klonex,
+    category: "Media",
+    socials: {
+      twitter: "https://x.com/klonex_",
+      linkedin: "linkedin.com/in/klonexofficial",
+      instagram: "https://www.instagram.com/klonexofficial_",
     },
   },
   {
