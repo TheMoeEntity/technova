@@ -29,7 +29,7 @@ const Hero = () => {
         <div className="w-fit flex-wrap text-sm mt-5 flex justify-center gap-5 items-center">
           <div className="flex border rounded-4xl border-gray-200 px-4 py-2 items-center gap-2">
             <Calendar />
-            <span>March 13th-14th, 2026</span>
+            <span>8AM March 14th, 2026</span>
           </div>
           <div
             title="Click to view location"
