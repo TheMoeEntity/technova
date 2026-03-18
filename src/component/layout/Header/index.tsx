@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { toast } from "sonner";
 // import { useNavigateTo } from "@/hooks/useNavigateTo";
 
 const Header = () => {
@@ -88,12 +89,14 @@ const Header = () => {
           </AnimatePresence>
         </div>
 
-        <Link
-          href={Data.RegisterLink}
+        <button
+          onClick={() => {
+            toast.error("Registration closed");
+          }}
           className="hidden lg:block bg-[#000000] rounded-xl text-white px-5 py-2 hover:bg-black/80 transition-colors"
         >
           Get Tickets
-        </Link>
+        </button>
       </div>
 
       {/* Mobile Menu Toggle */}
@@ -170,13 +173,15 @@ const Header = () => {
               </AnimatePresence>
             </div>
 
-            <Link
-              href={Data.RegisterLink}
+            <button
+              onClick={() => {
+                setIsOpen(false);
+                toast.error("Registration closed");
+              }}
               className="bg-[#000000] rounded-xl text-white px-8 py-3 hover:bg-black/80 transition-colors text-lg font-medium mt-4"
-              onClick={() => setIsOpen(false)}
             >
               Get Tickets
-            </Link>
+            </button>
           </motion.div>
         )}
       </AnimatePresence>

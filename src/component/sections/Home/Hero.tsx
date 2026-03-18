@@ -8,6 +8,7 @@ import artifact3 from "@/assets/images/artifact-3.svg";
 import { AnimatePresence, motion } from "framer-motion";
 import { Data, getInvolvedLinks } from "@/lib/constants";
 import Link from "next/link";
+import { toast } from "sonner";
 
 import Countdown from "@/component/ui/Countdown";
 
@@ -45,14 +46,12 @@ const Hero = () => {
       </motion.div>
 
       <div className="flex items-center gap-5 mt-10">
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href={Data.RegisterLink}
-          className="px-6 py-2 bg-black text-white rounded-lg"
+        <button
+          onClick={() => toast.error("Registration closed")}
+          className="px-6 py-2 bg-black text-white rounded-lg cursor-pointer"
         >
           Register Now
-        </a>
+        </button>
         {/* <a
           href=""
           className="px-6 py-2 bg-[#FFEFC1] border-[#FFC520] border text-black rounded-lg"
